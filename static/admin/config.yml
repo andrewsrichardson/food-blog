@@ -13,3 +13,6 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { name: main-image, label: Main Image, widget: image, media_library: config: multiple: false}
+      - { name: ingredients-image, label: Ingredients Image, widget: image, media_library: config: multiple: false}
+      - { name: other-images, label: Other Images, widget: image, media_library: config: multiple: true, required: false}
