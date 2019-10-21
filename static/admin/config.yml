@@ -6,11 +6,9 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/blog
     create: true
     fields:
-      - name: "path" 
-        label: "Path"
       - name: "date"
         label: "Date"
         widget: "datetime"
@@ -24,17 +22,17 @@ collections:
         widget: "image"
         media_library: 
           config: 
-            multiple: "false"
+            multiple: false
       - name: "ingredients-image"
         label: "Ingredients Image"
         widget: "image"
         media_library: 
           config: 
-            multiple: "false"
+            multiple: false
       - name: "other-images"
         label: "Other Images"
         widget: "image"
+        required: false 
         media_library:
           config: 
-            multiple: "true"
-            required: "false" 
+            multiple: true
