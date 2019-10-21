@@ -9,6 +9,9 @@ collections:
     folder: src/pages/blog
     create: true
     fields:
+      - name: "path"
+        label: "Path"
+        pattern: ["^[/]+[a-z0-9-]*$", "Must begin with a forward slash (/), and contain hyphens (-) rather than spaces. This the end of the URL to this blog post."]
       - name: "date"
         label: "Date"
         widget: "datetime"
