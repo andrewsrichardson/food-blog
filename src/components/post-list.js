@@ -12,6 +12,7 @@ export default () => {
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            path
           }
         }
       }

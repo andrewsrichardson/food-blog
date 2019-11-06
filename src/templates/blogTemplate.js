@@ -10,11 +10,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-    <div style={{
-      outlineStyle:`solid`,
-      outlineColor: `red`,
-      height:`100vh` }}
-      className="blog-post-container">
+    <div className="blog-post-container">
 
       <div style={{textAlign: `center`}}className="blog-post">
         <h1 style={{fontSize: `7em`}}>{frontmatter.title}</h1>
