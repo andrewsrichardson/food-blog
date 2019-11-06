@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    height: 72px;
+    box-shadow: 2px 0px 0px black;
+    border: 5px grey;
+}
+.logo {
+    padding: 15%
+}
+.menu-button {
+    padding: 15%
+}
+
+.header_navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+.spacer {
+    flex: 1;
+}
