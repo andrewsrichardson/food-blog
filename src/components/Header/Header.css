@@ -5,14 +5,16 @@
     width: 100%;
     background-color: pink;
     height: 72px;
-    box-shadow: 2px 0px 0px black;
+    box-shadow: 7px 7px 7px black;
     border: 5px grey;
+    z-index: 1;
 }
 .logo {
-    padding: 15%
+    padding: 15%;
+    font-size: 3rem
 }
 .menu-button {
-    padding: 15%
+    display: none
 }
 
 .header_navigation {
@@ -23,4 +25,23 @@
 }
 .spacer {
     flex: 1;
+}
+.nav-links {
+    display: flex
+}
+.nav-links:hover {
+    color: wheat
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+        padding: 2%
+    }
+    .nav-links{
+        display:none;
+    }
+    .menu-button {
+        display: flex
+    }
 }

@@ -1,13 +1,13 @@
 .menu-wrap {
     position: fixed;
-    top: 0;
+    top: 72px;
     left: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .menu {
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -15,27 +15,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
 }
 
-.menu > div {
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.4);
-    width: 200vw;
-    height: 200vw;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.75s
-}
-.menu > div > div{
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
 
+.menu.open {
+    top: 72px;
+    transform: translateY(0)
 }
 
-.menu > div > ul > li {
+
+.menu > ul > li {
     list-style: none;
     color: white;
     font-size: 1.5rem;
@@ -43,10 +35,16 @@
 
 }
 
-.menu > div > ul > li> a {
+.menu > ul > li> a {
     list-style: none;
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
     
+}
+.menu > ul > li> a:hover {
+    color: pink
+}
+.menu > ul > li> a:active {
+    color: pink
 }

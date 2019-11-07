@@ -9,30 +9,24 @@ function Menu(props){
           <Link to={props.to}>{props.children}</Link>
         </li>
     )
-    let vis = {visibility: `hidden`}
-    let trans = {transform: `scale(0)`, transition:`all 0.4s ease`}
-    let opacity = {opacity: `0`, transition: `opacity 0.4s ease`}
+
+
+    let openMenu = 'menu'    
 
     if (props.isOpen){
-        vis = {visibility: `visible`}
-        trans = {transform: `scale(1)`, transition:`all 0.4s ease`}
-        opacity = {opacity: `1`, transition: `opacity 0.4s ease`}
+        openMenu = 'menu open'
     }
 
     return(
     <div className="menu-wrap">    
-        <div className="menu" style={vis}>
-            <div style={trans}>
-                <div style={opacity}>
+        <div className={openMenu}>
                     <ul>
                         <ListLink to="/categories">Categories</ListLink>
                         <ListLink to="/about">About</ListLink>
                         <ListLink to="/Contact">Contact</ListLink>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>        
+     </div>        
     )
 }
 
