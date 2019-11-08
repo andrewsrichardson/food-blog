@@ -8,7 +8,7 @@ collections:
     label: Blog
     folder: src/pages/blog
     create: true
-    slug: {{path}}
+    slug: "{{path}}"
     fields:
       - name: "path"
         label: "Path"
