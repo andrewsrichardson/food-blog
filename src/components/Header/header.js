@@ -13,33 +13,33 @@ function Header ({ siteTitle }){
     setMenuOpen(!menuOpen)
   }
 
-  const mediaMatch = window.matchMedia('(max-width: 768)');
-  const [mobile , windowChange] = useState(mediaMatch.matches);
+  // const mediaMatch = window.matchMedia('(max-width: 768)');
+  // const [mobile , windowChange] = useState(mediaMatch.matches);
 
-  let logoStyle = {
-    color: `black`,
-    textDecoration: `none`
-  }
+  // let logoStyle = {
+  //   color: `black`,
+  //   textDecoration: `none`
+  // }
 
-  useEffect(() => {
-    const handler = e => windowChange(e.matches);
-    mediaMatch.addListener(handler);
-    if (mobile){
-      logoStyle = {
-        color: `black`,
-        textDecoration: `none`,
-        fontSize: `3rem`,
-      }
-    }
-    else {
-      logoStyle = {
-        color: `black`,
-        textDecoration: `none`,
-        fontSize: `2.8rem`,
-    }
-  }
-    return () => mediaMatch.removeListener(handler);
-  })
+  // useEffect(() => {
+  //   const handler = e => windowChange(e.matches);
+  //   mediaMatch.addListener(handler);
+  //   if (mobile){
+  //     logoStyle = {
+  //       color: `black`,
+  //       textDecoration: `none`,
+  //       fontSize: `3rem`,
+  //     }
+  //   }
+  //   else {
+  //     logoStyle = {
+  //       color: `black`,
+  //       textDecoration: `none`,
+  //       fontSize: `2.8rem`,
+  //   }
+  // }
+  //   return () => mediaMatch.removeListener(handler);
+  // })
  
   return(
     <header className="header">
