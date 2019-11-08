@@ -7,7 +7,7 @@
     height: 72px;
     box-shadow: 7px 7px 7px black;
     border: 5px grey;
-    z-index: 1;
+    z-index: 0;
 }
 .logo {
     padding: 15%;
