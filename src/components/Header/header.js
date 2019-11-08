@@ -25,11 +25,11 @@ function Header ({ siteTitle }){
   //   const handler = e => windowChange(e.matches);
   //   mediaMatch.addListener(handler);
   //   if (mobile){
-  //     logoStyle = {
-  //       color: `black`,
-  //       textDecoration: `none`,
-  //       fontSize: `3rem`,
-  //     }
+    const logoStyle = {
+        color: `black`,
+        textDecoration: `none`,
+        fontSize: `3rem`,
+      }
   //   }
   //   else {
   //     logoStyle = {
