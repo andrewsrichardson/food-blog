@@ -36,6 +36,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
               title
+              main_image
+              ingredients_image
+              other_images
             }
           }
         }
@@ -49,11 +52,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  // const other = node.frontmatter.other_images.replace("src/", "");
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    let mainImg = node.frontmatter.main_image.replace("src/assets", "images");
+    let ingredientsImg = node.frontmatter.ingredients_image.replace("src/assets", "images");
+    console.log(mainImg)
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        mainImage: `images/shish-kebab.jpg`,
+        ingredients: `images/shish-kebab.jpg`,
+        // other: other
+      }, // additional data can be passed via context
     })
   })
 }
