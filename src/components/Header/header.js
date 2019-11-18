@@ -12,34 +12,14 @@ function Header ({ siteTitle }){
   const menuToggleClickHandler = () => {
     setMenuOpen(!menuOpen)
   }
-
-  // const mediaMatch = window.matchMedia('(max-width: 768)');
-  // const [mobile , windowChange] = useState(mediaMatch.matches);
-
-  // let logoStyle = {
-  //   color: `black`,
-  //   textDecoration: `none`
-  // }
-
-  // useEffect(() => {
-  //   const handler = e => windowChange(e.matches);
-  //   mediaMatch.addListener(handler);
-  //   if (mobile){
     const logoStyle = {
         color: `black`,
         textDecoration: `none`,
         fontSize: `3rem`,
       }
-  //   }
-  //   else {
-  //     logoStyle = {
-  //       color: `black`,
-  //       textDecoration: `none`,
-  //       fontSize: `2.8rem`,
-  //   }
-  // }
-  //   return () => mediaMatch.removeListener(handler);
-  // })
+    const activeStyle = {
+      color: `pink`
+    }
  
   return(
     <header className="header">
@@ -57,19 +37,20 @@ function Header ({ siteTitle }){
                 color: `black`,
                 textDecoration: `none`,
                 fontSize: `2rem`,
-              }}>Categories
+              }}
+              activeStyle={{activeStyle}}>Categories
               </Link>          
               <Link to="/about" style={{
                 color: `black`,
                 textDecoration: `none`,
                 fontSize: `2rem`,
-              }}>About
+              }}activeStyle={{activeStyle}}>About
               </Link>
               <Link to="/contact" style={{
                 color: `black`,
                 textDecoration: `none`,
                 fontSize: `2rem`,
-              }}>Contact
+              }}activeStyle={{activeStyle}}>Contact
               </Link>
         </div>
 

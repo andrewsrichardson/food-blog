@@ -6,19 +6,12 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)  
-// const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const slug = createFilePath({ node, getNode, basePath: `pages/blog` }) 
-//     createNodeField({
-//       node,
-//       name: `path`,
-//       value: slug,
-//     })
-//   }
-// }
+const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
+
+exports.onCreateNode = ({ node}) => {
+  fmImagesToRelative(node);
+}
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -55,15 +48,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // const other = node.frontmatter.other_images.replace("src/", "");
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    let mainImg = node.frontmatter.main_image.replace("src/assets", "images");
-    let ingredientsImg = node.frontmatter.ingredients_image.replace("src/assets", "images");
+    let mainImg = node.frontmatter.main_image.replace("src/assets", "images").replace("/assets", "images");
+    let ingredientsImg = node.frontmatter.ingredients_image.replace("src/assets", "images").replace("/assets", "images");
     console.log(mainImg)
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
       context: {
-        mainImage: `images/shish-kebab.jpg`,
-        ingredients: `images/shish-kebab.jpg`,
+        mainImage: mainImg,
+        ingredientsImage: ingredientsImg,
         // other: other
       }, // additional data can be passed via context
     })

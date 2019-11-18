@@ -3,11 +3,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: pink;
+    background-color: #ffdeee;
     height: 72px;
-    box-shadow: 7px 7px 7px black;
+    box-shadow: 7px 2px 15px black;
     border: 5px grey;
-    z-index: 0;
+    z-index: 1;
 }
 .logo {
     padding: 15%;

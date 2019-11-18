@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
+import "./blogTemplate.css"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +10,6 @@ export default function Template({
 
   const { markdownRemark, main, ingredients } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-  console.log(main)
 
   return (
     <Layout>
@@ -18,18 +18,23 @@ export default function Template({
       <div style={{textAlign: `center`}}className="blog-post">
         <h1 style={{fontSize: `7em`}}>{frontmatter.title}</h1>
         <h2 style={{fontSize: `1em`}} >{frontmatter.date}</h2>
+        <div className="img-container">
+          <Image
+            fluid={main.childImageSharp.fluid}
+            alt="Main Image"
+            />
+        </div>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <Image
-          fluid={main.childImageSharp.fluid}
-          alt="Main Image"
-          />
-        <Image
-          fluid={ingredients.childImageSharp.fluid}
-          alt="Ingredients Image"
-          />
+
+        <div className="img-container">
+          <Image
+            fluid={ingredients.childImageSharp.fluid}
+            alt="Ingredients Image"
+            />
+        </div>
       </div>
     </div>
     </Layout>
@@ -37,7 +42,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($path: String!, $mainImage: String!, $ingredients: String!) {
+  query($path: String!, $mainImage: String!, $ingredientsImage: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -57,7 +62,7 @@ export const pageQuery = graphql`
             }
           }
         }
-    ingredients: file(relativePath: {eq: $ingredients}) {
+    ingredients: file(relativePath: {eq: $ingredientsImage}) {
           childImageSharp {
             fluid {
               aspectRatio
