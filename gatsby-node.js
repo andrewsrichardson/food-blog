@@ -7,11 +7,11 @@
 // You can delete this file if you're not using it
 const path = require(`path`)  
 
-const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-exports.onCreateNode = ({ node}) => {
+exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node);
-}
+};  
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -31,7 +31,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               title
               main_image
               ingredients_image
-              other_images
             }
           }
         }
@@ -48,9 +47,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // const other = node.frontmatter.other_images.replace("src/", "");
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    let mainImg = node.frontmatter.main_image.replace("src/assets", "images").replace("/assets", "images");
-    let ingredientsImg = node.frontmatter.ingredients_image.replace("src/assets", "images").replace("/assets", "images");
-    console.log(mainImg)
+    let mainImg = node.frontmatter.main_image.replace("src/assets", "images");
+    let ingredientsImg = node.frontmatter.ingredients_image.replace("src/assets", "images");
+
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,

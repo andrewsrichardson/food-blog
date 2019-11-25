@@ -2,7 +2,7 @@ backend:
   name: github
   repo: andrewsrichardson/food-blog
 media_folder: src/images
-public_folder: src/images
+public_folder: public
 collections:
   - name: blog
     label: Blog
@@ -21,19 +21,19 @@ collections:
       - name: "body"
         label: "Body"
         widget: "markdown"
-      - name: "main-image"
+      - name: "main_image"
         label: "Main Image"
         widget: "image"
         media_library: 
           config: 
             multiple: false
-      - name: "ingredients-image"
+      - name: "ingredients_image"
         label: "Ingredients Image"
         widget: "image"
         media_library: 
           config: 
             multiple: false
-      - name: "other-images"
+      - name: "other_images"
         label: "Other Images"
         widget: "image"
         required: false 
