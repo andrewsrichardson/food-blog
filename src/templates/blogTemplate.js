@@ -18,23 +18,23 @@ export default function Template({
       <div style={{textAlign: `center`}}className="blog-post">
         <h1 style={{fontSize: `7em`}}>{frontmatter.title}</h1>
         <h2 style={{fontSize: `1em`}} >{frontmatter.date}</h2>
-        <div className="img-container">
+        {/* <div className="img-container">
           <Image
             fluid={main.childImageSharp.fluid}
             alt="Main Image"
             />
-        </div>
+        </div> */}
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        <div className="img-container">
+        {/* <div className="img-container">
           <Image
             fluid={ingredients.childImageSharp.fluid}
             alt="Ingredients Image"
             />
-        </div>
+        </div> */}
       </div>
     </div>
     </Layout>
