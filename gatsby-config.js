@@ -5,30 +5,21 @@ module.exports = {
     author: `@andrewsrichardson`,
   },
 
-
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `media`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
         path: `${__dirname}/static/assets`,
+        name: `media`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
         path: `${__dirname}/src/pages/blog`,
+        name: `content`,
       },
     },
-
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -37,23 +28,11 @@ module.exports = {
         plugins: [
           {
             resolve: `gatsby-remark-relative-images`,
-            options: {
-              name: 'media',
-            },
+            options: {},
           },
-          { resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-              backgroundColor: `transparent`,
-            },
-          },
-        ]
-      }
+        ],
+      },
     },
-
-    
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-netlify',
   ],
 }

@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: andrewsrichardson/food-blog
-media_folder: src/images
-public_folder: public
+media_folder: static/assets
+public_folder: src
 collections:
   - name: blog
     label: Blog
@@ -12,7 +12,11 @@ collections:
     fields:
       - name: "path"
         label: "Path"
-        pattern: ["^[/]+[a-z0-9-]*$", "Must begin with a forward slash (/), and contain hyphens (-) rather than spaces. This the end of the URL to this blog post."]
+        pattern:
+          [
+            "^[/]+[a-z0-9-]*$",
+            "Must begin with a forward slash (/), and contain hyphens (-) rather than spaces. This the end of the URL to this blog post.",
+          ]
       - name: "date"
         label: "Date"
         widget: "datetime"
@@ -24,19 +28,19 @@ collections:
       - name: "main_image"
         label: "Main Image"
         widget: "image"
-        media_library: 
-          config: 
+        media_library:
+          config:
             multiple: false
       - name: "ingredients_image"
         label: "Ingredients Image"
         widget: "image"
-        media_library: 
-          config: 
+        media_library:
+          config:
             multiple: false
       - name: "other_images"
         label: "Other Images"
         widget: "image"
-        required: false 
+        required: false
         media_library:
-          config: 
+          config:
             multiple: true

@@ -1,0 +1,6 @@
+.wraper {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  color: grey;
+}
