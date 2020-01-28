@@ -1,6 +1,6 @@
-.wraper {
-  width: 90%;
+.post-list-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  color: grey;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: grey;
 }

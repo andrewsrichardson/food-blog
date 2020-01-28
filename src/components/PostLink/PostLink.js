@@ -1,26 +1,28 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import Image from "gatsby-image"
 import "./postlink.css"
 
+function linkTo(url) {
+  navigate(url)
+}
+
 const PostLink = ({ post }) => (
-  <div className="post">
+  <div className="post-wrapper">
     <div className="title-wrapper">
       <Link className="post-title" to={post.frontmatter.path}>
         {post.frontmatter.title} ({post.frontmatter.date})
       </Link>
     </div>
-    <div className="image-wrapper">
+    <div
+      className="image-wrapper"
+      onClick={() => linkTo(post.frontmatter.path)}
+    >
       <div className="image-overlay">
         <Image
           className="main-image"
-          fluid={post.frontmatter.main_image.childImageSharp.fluid}
+          fixed={post.frontmatter.main_image.childImageSharp.fixed}
           alt="Main Image"
-          style={
-            {
-              // position: `absolute`,
-            }
-          }
         />
       </div>
     </div>

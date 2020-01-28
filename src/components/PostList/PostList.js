@@ -17,12 +17,8 @@ export default () => {
               path
               main_image {
                 childImageSharp {
-                  fluid {
-                    aspectRatio
-                    base64
-                    sizes
-                    src
-                    srcSet
+                  fixed(width: 800) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }
@@ -48,5 +44,9 @@ export default () => {
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-  return <div className="wrapper">{Posts}</div>
+  return (
+    <div className="post-list-wrapper">
+      <div>{Posts}</div>
+    </div>
+  )
 }
