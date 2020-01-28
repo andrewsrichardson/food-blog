@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import Image from "gatsby-image"
-import "./postlink.css"
+import "./PostLink.css"
 
 function linkTo(url) {
   navigate(url)

@@ -2,7 +2,7 @@
 
 ## TODO
 
--categories page and infrastructure
+-categories page and infrastructuregit
 -header growth/ shrink on scroll
 -email list pop-up
 -carousel for featured posts on main page
