@@ -3,10 +3,6 @@ import { Link, navigate } from "gatsby"
 import Image from "gatsby-image"
 import "./PostLink.css"
 
-function linkTo(url) {
-  navigate(url)
-}
-
 const PostLink = ({ post }) => (
   <div className="post-wrapper">
     <div className="title-wrapper">
@@ -16,7 +12,7 @@ const PostLink = ({ post }) => (
     </div>
     <div
       className="image-wrapper"
-      onClick={() => linkTo(post.frontmatter.path)}
+      onClick={() => navigate(post.frontmatter.path)}
     >
       <div className="image-overlay">
         <Image
