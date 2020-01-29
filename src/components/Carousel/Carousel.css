@@ -1,0 +1,34 @@
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 2vh;
+}
+.carousel {
+  position: relative;
+  min-width: 100%;
+  /* display: flex;
+  justify-content: center; */
+}
+.slider {
+  position: relative;
+}
+.slider-item {
+  position: relative;
+}
+.carousel__slider {
+  max-height: 80vh;
+}
+.gatsby-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  padding-bottom: 0;
+}
+.carousel-item-wrapper {
+  position: relative;
+  height: 100%;
+}
+.carousel__inner-slide {
+  /* position: relative; */
+}

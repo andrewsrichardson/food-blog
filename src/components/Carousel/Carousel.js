@@ -9,6 +9,7 @@ import {
   ButtonNext,
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
+import "./Carousel.css"
 
 export default function Carousel() {
   const data = useStaticQuery(graphql`
@@ -17,10 +18,16 @@ export default function Carousel() {
         edges {
           node {
             frontmatter {
+              date
+              title
               main_image {
                 childImageSharp {
-                  fixed(width: 1200) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 1920) {
+                    aspectRatio
+                    base64
+                    sizes
+                    src
+                    srcSet
                   }
                 }
               }
@@ -30,27 +37,42 @@ export default function Carousel() {
       }
     }
   `)
+
   const edges = data.allMarkdownRemark.edges
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => (
-      <Image
-        fixed={edge.node.frontmatter.main_image.childImageSharp.fixed}
-      ></Image>
+      <div className="carousel-item-wrapper">
+        <Image
+          className="carousel-image"
+          fluid={edge.node.frontmatter.main_image.childImageSharp.fluid}
+          alt="carousel-image"
+        />
+      </div>
     ))
   return (
-    <CarouselProvider
-      naturalSlideWidth={100}
-      naturalSlideHeight={125}
-      totalSlides={3}
-    >
-      <Slider>
-        <Slide index={0}>I am the first Slide.</Slide>
-        <Slide index={1}>I am the second Slide.</Slide>
-        <Slide index={2}>I am the third Slide.</Slide>
-      </Slider>
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
-    </CarouselProvider>
+    <div className="carousel-wrapper">
+      <CarouselProvider
+        naturalSlideWidth={100}
+        naturalSlideHeight={125}
+        totalSlides={3}
+        isPlaying={true}
+        infinite={true}
+      >
+        <Slider className="slider">
+          <Slide className="slider-item" index={0}>
+            {Posts[0]}
+          </Slide>
+          <Slide className="slider-item" index={1}>
+            {Posts[1]}
+          </Slide>
+          <Slide className="slider-item" index={2}>
+            {Posts[2]}
+          </Slide>
+        </Slider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+      </CarouselProvider>
+    </div>
   )
 }
