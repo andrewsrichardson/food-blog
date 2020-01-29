@@ -4,16 +4,13 @@ import Image from "gatsby-image"
 import "./PostLink.css"
 
 const PostLink = ({ post }) => (
-  <div className="post-wrapper">
+  <div className="post-wrapper" onClick={() => navigate(post.frontmatter.path)}>
     <div className="title-wrapper">
       <Link className="post-title" to={post.frontmatter.path}>
         {post.frontmatter.title} ({post.frontmatter.date})
       </Link>
     </div>
-    <div
-      className="image-wrapper"
-      onClick={() => navigate(post.frontmatter.path)}
-    >
+    <div className="image-wrapper">
       <div className="image-overlay">
         <Image
           className="main-image"
