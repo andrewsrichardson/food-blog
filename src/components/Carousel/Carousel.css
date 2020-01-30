@@ -4,19 +4,19 @@
   margin-top: 2vh;
 }
 .carousel {
-  position: relative;
+  /* position: relative; */
   min-width: 100%;
+  z-index: 0;
   /* display: flex;
   justify-content: center; */
 }
 .slider {
-  position: relative;
 }
 .slider-item {
-  position: relative;
 }
 .carousel__slider {
   max-height: 80vh;
+  z-index: 0;
 }
 .gatsby-image-wrapper {
   position: relative;
@@ -29,6 +29,13 @@
   position: relative;
   height: 100%;
 }
-.carousel__inner-slide {
-  /* position: relative; */
+.carousel__dot-group {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 90%;
+  margin-left: -33px;
+}
+.carousel__dot {
+  position: relative;
 }

@@ -619,3 +619,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.border {
+  border: solid 1px grey;
+  box-shadow: 3px 3px 3px 3px #ffdeee;
+  background-color: white;
+}

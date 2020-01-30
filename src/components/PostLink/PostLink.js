@@ -4,7 +4,10 @@ import Image from "gatsby-image"
 import "./PostLink.css"
 
 const PostLink = ({ post }) => (
-  <div className="post-wrapper" onClick={() => navigate(post.frontmatter.path)}>
+  <div
+    className="post-wrapper border"
+    onClick={() => navigate(post.frontmatter.path)}
+  >
     <div className="title-wrapper">
       <Link className="post-title" to={post.frontmatter.path}>
         {post.frontmatter.title} ({post.frontmatter.date})

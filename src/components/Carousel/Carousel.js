@@ -7,6 +7,7 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
+  DotGroup,
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import "./Carousel.css"
@@ -51,14 +52,15 @@ export default function Carousel() {
       </div>
     ))
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel-wrapper border">
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={125}
+        naturalSlideHeight={120}
         totalSlides={3}
         isPlaying={true}
         infinite={true}
       >
+        <DotGroup className="border" />
         <Slider className="slider">
           <Slide className="slider-item" index={0}>
             {Posts[0]}
@@ -70,8 +72,6 @@ export default function Carousel() {
             {Posts[2]}
           </Slide>
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
       </CarouselProvider>
     </div>
   )
