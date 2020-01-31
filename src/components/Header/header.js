@@ -4,9 +4,26 @@ import React, { useState } from "react"
 import ToggleMenuButton from "./ToggleMenuButton"
 import "./Header.css"
 import Menu from "./Menu"
+import useDocumentScrollThrottled from "./useDocumentScrollThrottled"
 
 function Header({ siteTitle }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [logoInHeader, moveLogo] = useState(false)
+
+  const logoSize = logoInHeader ? "small" : ""
+
+  const MINIMUM_SCROLL = 80
+  const TIMEOUT_DELAY = 400
+
+  useDocumentScrollThrottled(callbackData => {
+    const { previousScrollTop, currentScrollTop } = callbackData
+    const isScrolledDown = previousScrollTop < currentScrollTop
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
+
+    setTimeout(() => {
+      moveLogo(isScrolledDown && isMinimumScrolled)
+    }, TIMEOUT_DELAY)
+  })
 
   const menuToggleClickHandler = () => {
     setMenuOpen(!menuOpen)
@@ -23,43 +40,32 @@ function Header({ siteTitle }) {
   return (
     <header className="header">
       <nav className="header_navigation">
-        <h1 className="logo">
-          <Link to="/" style={logoStyle}>
-            {siteTitle}
-          </Link>
-        </h1>
-
+        <div className={`logo-wrapper  ${logoSize}`}>
+          <h1 className={`logo border`}>
+            <Link className="nav-link" to="/" style={logoStyle}>
+              {siteTitle}
+            </Link>
+          </h1>
+        </div>
         <div className="spacer"></div>
-        <div className="nav-links">
+        <div className="nav-link-wrapper">
           <Link
+            className="nav-link border"
             to="/categories"
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: `2rem`,
-            }}
             activeStyle={{ activeStyle }}
           >
             Categories
           </Link>
           <Link
+            className="nav-link border"
             to="/about"
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: `2rem`,
-            }}
             activeStyle={{ activeStyle }}
           >
             About
           </Link>
           <Link
+            className="nav-link border"
             to="/contact"
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: `2rem`,
-            }}
             activeStyle={{ activeStyle }}
           >
             Contact
