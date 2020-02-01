@@ -12,16 +12,15 @@ function Header({ siteTitle }) {
 
   const logoSize = logoInHeader ? "small" : ""
 
-  const MINIMUM_SCROLL = 80
+  const MAX_SCROLL = 80
   const TIMEOUT_DELAY = 400
 
   useDocumentScrollThrottled(callbackData => {
-    const { previousScrollTop, currentScrollTop } = callbackData
-    const isScrolledDown = previousScrollTop < currentScrollTop
-    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
+    const { currentScrollTop } = callbackData
+    const isScrolledDown = currentScrollTop > MAX_SCROLL
 
     setTimeout(() => {
-      moveLogo(isScrolledDown && isMinimumScrolled)
+      moveLogo(isScrolledDown)
     }, TIMEOUT_DELAY)
   })
 
