@@ -1,8 +1,7 @@
 # Website created for friend's food blog.
 
-## TODO
+This is a WIP, to eventaully be used as a real production site.
 
--categories page and infrastructuregit
--header growth/ shrink on scroll
--email list pop-up
--carousel for featured posts on main page
+Find the site here: https://compassionate-bartik-00dba3.netlify.com/
+
+Built using Gatsby and Netlify.
