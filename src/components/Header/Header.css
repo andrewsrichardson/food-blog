@@ -15,14 +15,12 @@
   height: 40%;
   top: 2%;
   left: 50%;
-  margin-left: -221px;
-  transition: 0.2s ease;
+  margin-left: -150px;
+  transition: 0.1s ease;
 }
+
 .logo-wrapper.small {
   transform: translate(0px, -80%);
-}
-.logo {
-  font-size: 3rem;
 }
 .menu-button {
   display: none;
@@ -51,16 +49,39 @@
   padding: 2px;
   margin-top: 10px;
 }
-
+.h1 {
+  font-size: 100%;
+}
 @media (max-width: 768px) {
-  .logo {
-    font-size: 2rem;
-    padding-left: 2%;
+  .nav-link {
+    font-size: 1.8rem !important;
+    margin-top: 0px;
+  }
+  .logo-wrapper {
+    align-self: center;
+    max-width: 95%;
+    font-size: 10px;
+    margin-left: 0px;
+    position: static;
+    height: 40%;
+    top: 2%;
+    left: none;
+  }
+  .border {
+    align-self: center;
+  }
+  .logo-wrapper.small {
+    transform: none;
   }
   .nav-link-wrapper {
     display: none;
+    margin-right: 0px;
+  }
+  .border {
+    margin-bottom: 0px;
   }
   .menu-button {
     display: flex;
+    align-self: center;
   }
 }

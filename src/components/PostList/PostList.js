@@ -17,8 +17,8 @@ export default () => {
               path
               main_image {
                 childImageSharp {
-                  fixed(width: 800) {
-                    ...GatsbyImageSharpFixed
+                  fluid {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

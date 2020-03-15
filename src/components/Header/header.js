@@ -30,7 +30,7 @@ function Header({ siteTitle }) {
   const logoStyle = {
     color: `black`,
     textDecoration: `none`,
-    fontSize: `3rem`,
+    // fontSize: `3rem`,
   }
   const activeStyle = {
     color: `pink`,

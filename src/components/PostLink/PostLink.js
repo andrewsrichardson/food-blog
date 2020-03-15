@@ -17,7 +17,7 @@ const PostLink = ({ post }) => (
       <div className="image-overlay">
         <Image
           className="main-image"
-          fixed={post.frontmatter.main_image.childImageSharp.fixed}
+          fluid={post.frontmatter.main_image.childImageSharp.fluid}
           alt="Main Image"
         />
       </div>
