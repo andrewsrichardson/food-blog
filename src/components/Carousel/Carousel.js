@@ -41,7 +41,7 @@ export default function Carousel() {
 
   const edges = data.allMarkdownRemark.edges
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    // .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => (
       <div className="carousel-item-wrapper">
         <Image

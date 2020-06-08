@@ -13,7 +13,7 @@ function Header({ siteTitle }) {
   const logoSize = logoInHeader ? "small" : ""
 
   const MAX_SCROLL = 80
-  const TIMEOUT_DELAY = 400
+  const TIMEOUT_DELAY = 100
 
   useDocumentScrollThrottled(callbackData => {
     const { currentScrollTop } = callbackData
