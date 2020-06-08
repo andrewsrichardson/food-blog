@@ -31,6 +31,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
               title
+              tags
               main_image {
                 childImageSharp {
                   fluid {
