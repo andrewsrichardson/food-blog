@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
+const lo = require("lodash")
 
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
@@ -17,10 +18,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const tagsTemplate = path.resolve(`src/templates/tagsTemplate.js`)
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -55,6 +57,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `)
 
@@ -64,15 +71,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // const other = node.frontmatter.other_images.replace("src/", "");
+  const posts = result.data.postsRemark.edges
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  posts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
       context: {
         // other: other
       }, // additional data can be passed via context
+    })
+  })
+
+  const tags = result.data.tagsGroup.group
+  tags.forEach(tag => {
+    createPage({
+      path: `/categories/${lo.kebabCase(tag.fieldValue)}/`,
+      component: tagsTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
     })
   })
 }

@@ -22,6 +22,22 @@ collections:
         widget: "datetime"
       - name: "title"
         label: "Title"
+      - name: "tags"
+        label: "Tags"
+        widget: select
+        min: 1
+        max: 3
+        options:
+          [
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Snacks",
+            "Indian",
+            "Italian",
+            "British",
+          ]
+        default: ["Dinner"]
       - name: "body"
         label: "Body"
         widget: "markdown"
