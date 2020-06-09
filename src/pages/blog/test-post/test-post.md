@@ -1,5 +1,6 @@
 ---
 path: /test-post
+slug: /test-post
 date: 2020-06-09T15:42:57.531Z
 title: test-post
 tags:
