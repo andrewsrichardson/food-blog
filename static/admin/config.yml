@@ -8,7 +8,7 @@ collections:
     label: Blog
     folder: src/pages/blog
     create: true
-    slug: "{{path}}/index "
+    slug: "{{path}}/index"
     media_folder: ""
     public_folder: ""
     fields:
