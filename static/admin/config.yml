@@ -9,7 +9,7 @@ collections:
     folder: src/pages/blog
     label_singular: "blog"
     create: true
-    path: "{{path}}/index"
+    path: "{{path}}/{{path}}"
     media_folder: ""
     public_folder: ""
     fields:
