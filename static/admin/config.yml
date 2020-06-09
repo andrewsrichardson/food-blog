@@ -1,14 +1,16 @@
 backend:
   name: github
   repo: andrewsrichardson/food-blog
-media_folder: public/assets
-public_folder: public
+media_folder: "static/assets/"
+public_folder: "/assets"
 collections:
   - name: blog
     label: Blog
     folder: src/pages/blog
     create: true
-    slug: "{{path}}"
+    slug: "{{path}}/index "
+    media_folder: ""
+    public_folder: ""
     fields:
       - name: "path"
         label: "Path"
