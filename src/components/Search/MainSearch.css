@@ -1,0 +1,8 @@
+.search_container {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_input {
+}

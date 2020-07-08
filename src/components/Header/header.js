@@ -50,6 +50,13 @@ function Header({ siteTitle }) {
         <div className="nav-link-wrapper">
           <Link
             className="nav-link border"
+            to="/search"
+            activeStyle={{ activeStyle }}
+          >
+            Search
+          </Link>
+          <Link
+            className="nav-link border"
             to="/categories"
             activeStyle={{ activeStyle }}
           >
