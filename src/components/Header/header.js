@@ -10,7 +10,10 @@ function Header({ siteTitle }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [logoInHeader, moveLogo] = useState(false)
 
-  const logoSize = logoInHeader ? "small" : ""
+  let logoSize = logoInHeader ? "small" : ""
+  if (window.location.pathname !== "/") {
+    logoSize = "small"
+  }
 
   const MAX_SCROLL = 80
   const TIMEOUT_DELAY = 100
@@ -18,7 +21,6 @@ function Header({ siteTitle }) {
   useDocumentScrollThrottled(callbackData => {
     const { currentScrollTop } = callbackData
     const isScrolledDown = currentScrollTop > MAX_SCROLL
-
     setTimeout(() => {
       moveLogo(isScrolledDown)
     }, TIMEOUT_DELAY)
