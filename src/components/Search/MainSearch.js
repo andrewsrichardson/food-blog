@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import "./MainSearch.css"
 // import PostLink from "../PostLink/PostLink.js"
 
@@ -14,8 +14,16 @@ class Search extends Component {
     const ResultList = () => {
       if (this.state.results.length > 0) {
         return this.state.results.map((page, i) => (
-          <div className="item-search" key={i}>
-            <Link to={"/" + page.url}>{page.title}</Link>
+          <div
+            className="item_search_result pointer"
+            key={i}
+            onClick={() => {
+              console.log(page)
+              const path = "/" + page.url
+              navigate(path)
+            }}
+          >
+            <h1>{page.title}</h1>
           </div>
         ))
       } else if (this.state.query.length > 2) {
@@ -32,12 +40,14 @@ class Search extends Component {
 
     return (
       <div className="search_container">
-        <input
-          className="search_input"
-          type="text"
-          onChange={this.search}
-          placeholder={"Search"}
-        />
+        <div className="input_container">
+          <input
+            className="search_input"
+            type="text"
+            onChange={this.search}
+            placeholder={"Search"}
+          />
+        </div>
         <div className="search_list">
           <ResultList />
         </div>

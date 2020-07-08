@@ -1,8 +1,21 @@
-.search_container {
+.input_container {
   min-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.search_input {
+.item_search_result {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  min-width: 700px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.search_list {
+  display: flex;
+  justify-content: center;
+  align-items: top;
 }
