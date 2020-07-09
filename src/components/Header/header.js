@@ -12,7 +12,7 @@ function Header({ siteTitle }) {
 
   // let logoSize = logoInHeader ? "small" : ""
   // if (window.location.pathname !== "/") {
-  logoSize = "small"
+  const logoSize = "small"
   // }
 
   const MAX_SCROLL = 80

@@ -27,13 +27,13 @@ const Layout = ({ children }) => {
           style={{
             display: `inline-block`,
             marginTop: `72px`,
-            maxWidth: `90%`,
-            minWidth: `90%`,
-            padding: `0px 1.0875rem 1.45rem`,
+            width: `100%`,
+            minHeight: `750px `,
+            padding: `0px 0rem 0rem`,
           }}
         >
-          <main>{children}</main>
-          <footer style={{ textAlign: `center` }}>
+          <main className="main">{children}</main>
+          <footer className="footer">
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">

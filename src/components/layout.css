@@ -13,15 +13,14 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
-main,
 menu,
 nav,
 section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
@@ -623,4 +622,24 @@ pre tt:after {
   border: solid 1px grey;
   box-shadow: 3px 3px 3px 3px #ffdeee;
   background-color: white;
+}
+
+.main {
+  position: relative;
+  min-height: 750px;
+  width: 100%;
+  margin-bottom: 250px;
+  box-shadow: 10px 58px 85px -25px rgba(0, 0, 0, 0.72);
+  z-index: 2;
+  background-color: white;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  /* padding-top: 72px; */
+  padding-left: 50px;
+  background: #4b466f;
+  z-index: -1;
 }
