@@ -3,24 +3,28 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 80px;
   border: 5px grey;
   z-index: 3;
+  background-color: white;
 }
 .logo-wrapper {
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 40%;
-  top: 2%;
-  left: 50%;
+  /* top: 2%; */
+  /* left: 50%;
   margin-left: -150px;
-  transition: 0.1s ease;
+  transition: 0.1s ease; */
 }
 
 .logo-wrapper.small {
-  transform: translate(0px, -80%);
+  /* transform: translate(0px, -80%); */
+}
+.logo {
+  margin-bottom: 0;
 }
 .menu-button {
   display: none;
@@ -47,7 +51,7 @@
   text-decoration: none;
   font-size: 2rem;
   padding: 2px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .h1 {
   font-size: 100%;

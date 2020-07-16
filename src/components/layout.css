@@ -623,7 +623,14 @@ pre tt:after {
   box-shadow: 3px 3px 3px 3px #ffdeee;
   background-color: white;
 }
-
+.border-curved {
+  border: solid 1px grey;
+  box-shadow: 3px 3px 3px 3px #ffdeee;
+  background-color: white;
+  border-radius: 25px;
+  padding-left: 6px;
+  padding-right: 4px;
+}
 .main {
   position: relative;
   min-height: 750px;
@@ -640,6 +647,6 @@ pre tt:after {
   height: 250px;
   /* padding-top: 72px; */
   padding-left: 50px;
-  background: #4b466f;
+  background: #46466f;
   z-index: -1;
 }
