@@ -42,7 +42,7 @@ function Header({ siteTitle }) {
     <header className="header">
       <nav className="header_navigation">
         <div className={`logo-wrapper  ${logoSize}`}>
-          <h1 className={`logo border`}>
+          <h1 className={`logo`}>
             <Link className="nav-link" to="/" style={logoStyle}>
               {siteTitle}
             </Link>
@@ -51,24 +51,20 @@ function Header({ siteTitle }) {
         <div className="spacer"></div>
         <div className="nav-link-wrapper">
           <Link
-            className="nav-link border-curved"
+            className="nav-link "
             to="/search"
             activeStyle={{ activeStyle }}
           >
             Search
           </Link>
           <Link
-            className="nav-link border-curved"
+            className="nav-link "
             to="/categories"
             activeStyle={{ activeStyle }}
           >
             Categories
           </Link>
-          <Link
-            className="nav-link border-curved"
-            to="/about"
-            activeStyle={{ activeStyle }}
-          >
+          <Link className="nav-link " to="/about" activeStyle={{ activeStyle }}>
             About
           </Link>
         </div>

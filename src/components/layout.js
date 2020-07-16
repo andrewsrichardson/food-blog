@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
         <div
           style={{
             display: `inline-block`,
-            marginTop: `72px`,
             width: `100%`,
             minHeight: `750px `,
             padding: `0px 0rem 0rem`,

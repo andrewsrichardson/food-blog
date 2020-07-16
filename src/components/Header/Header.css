@@ -26,6 +26,11 @@
 .logo {
   margin-bottom: 0;
 }
+.logo > a {
+  font-family: "Work Sans 600", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
 .menu-button {
   display: none;
 }
@@ -35,7 +40,7 @@
   display: flex;
   height: 100%;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 8rem;
 }
 .spacer {
   flex: 1;
@@ -45,12 +50,16 @@
 }
 .nav-link-wrapper > a {
   margin-right: 10px;
+  margin-left: 10px;
 }
 .nav-link {
   color: black;
   text-decoration: none;
   font-size: 2rem;
   padding: 2px;
+  padding-bottom: 5px;
+  font-family: "Trirong 100", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* margin-top: 10px; */
 }
 .h1 {

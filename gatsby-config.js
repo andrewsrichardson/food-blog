@@ -168,5 +168,16 @@ module.exports = {
     //       })),
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Work Sans\:600`,
+          `Trirong\:100`, // you can also specify font weights and styles
+          `Hind Madurai\:300`,
+        ],
+        display: "swap",
+      },
+    },
   ],
 }
