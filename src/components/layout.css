@@ -384,6 +384,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: "Hind Madurai 300", Times, serif;
 }
 figure {
   margin-left: 0;
@@ -621,12 +622,12 @@ pre tt:after {
 }
 .border {
   border: solid 1px lightgray;
-  box-shadow: 3px 3px 3px 3px #ffdeee;
+  box-shadow: 3px 3px 3px 3px #c19997;
   background-color: white;
 }
 .border-curved {
   border: solid 1px lightgray;
-  box-shadow: 3px 3px 3px 3px #ffdeee;
+  box-shadow: 3px 3px 3px 3px #c19997;
   background-color: white;
   border-radius: 25px;
   padding-left: 6px;
@@ -636,6 +637,7 @@ pre tt:after {
   position: relative;
   min-height: 750px;
   width: 100%;
+  margin-top: 80px;
   margin-bottom: 200px;
   box-shadow: 10px 58px 85px -25px rgba(0, 0, 0, 0.72);
   z-index: 2;
@@ -648,6 +650,57 @@ pre tt:after {
   height: 200px;
   /* padding-top: 72px; */
   /* padding-left: 50px; */
-  background: #46466f;
+  background: #323c5d;
   z-index: 0;
+}
+
+.grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.grow:active,
+.grow:hover,
+.grow:focus {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.underline {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.underline:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #f69d65;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline:hover::before,
+.underline:focus::before,
+.underline:active::before {
+  right: 0;
 }

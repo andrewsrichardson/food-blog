@@ -51,20 +51,24 @@ function Header({ siteTitle }) {
         <div className="spacer"></div>
         <div className="nav-link-wrapper">
           <Link
-            className="nav-link "
+            className="nav-link underline"
             to="/search"
             activeStyle={{ activeStyle }}
           >
             Search
           </Link>
           <Link
-            className="nav-link "
+            className="nav-link underline"
             to="/categories"
             activeStyle={{ activeStyle }}
           >
             Categories
           </Link>
-          <Link className="nav-link " to="/about" activeStyle={{ activeStyle }}>
+          <Link
+            className="nav-link underline"
+            to="/about"
+            activeStyle={{ activeStyle }}
+          >
             About
           </Link>
         </div>

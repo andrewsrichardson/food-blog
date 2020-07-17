@@ -74,25 +74,25 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="socials">
-        <a href="https://www.instagram.com/trustthisfeast/">
+        <a href="https://www.instagram.com/trustthisfeast/" className="grow">
           <Img
             fixed={data.instagram.nodes[0].childImageSharp.fixed}
             alt="instagram"
           ></Img>
         </a>
-        <a href="https://www.facebook.com/TrustThisFeast/">
+        <a href="https://www.facebook.com/TrustThisFeast/" className="grow">
           <Img
             fixed={data.facebook.nodes[0].childImageSharp.fixed}
             alt="facebook"
           ></Img>
         </a>
-        <a href="https://twitter.com/TrustThisFeast">
+        <a href="https://twitter.com/TrustThisFeast" className="grow">
           <Img
             fixed={data.twitter.nodes[0].childImageSharp.fixed}
             alt="twitter"
           ></Img>
         </a>
-        <a href="mailto:jaina@trustthisfeast.com">
+        <a href="mailto:jaina@trustthisfeast.com" className="grow">
           <Img
             fixed={data.envelope.nodes[0].childImageSharp.fixed}
             alt="email"

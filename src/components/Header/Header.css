@@ -49,15 +49,15 @@
   display: flex;
 }
 .nav-link-wrapper > a {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .nav-link {
   color: black;
   text-decoration: none;
   font-size: 2rem;
   padding: 2px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   font-family: "Trirong 100", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* margin-top: 10px; */
