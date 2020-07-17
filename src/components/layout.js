@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header/header"
+import Footer from "./footer/footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -32,14 +33,7 @@ const Layout = ({ children }) => {
           }}
         >
           <main className="main">{children}</main>
-          <footer className="footer">
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">
-              Gatsby by <a href="https://github.com/andrewsrichardson"></a>{" "}
-              Andrew Richardson
-            </a>
-          </footer>
+          <Footer></Footer>
         </div>
       </div>
     </>
