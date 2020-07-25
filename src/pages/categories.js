@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import lo from "lodash"
+import "./categories.css"
 
 const CategoriesPage = ({
   data: {
@@ -11,7 +12,7 @@ const CategoriesPage = ({
 }) => (
   <Layout>
     <SEO title="Categories" />
-    <div>
+    <div className="categories-wrapper">
       <h1>Categories</h1>
       <ul>
         {group.map(tag => (

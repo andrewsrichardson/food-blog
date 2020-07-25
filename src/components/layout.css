@@ -235,6 +235,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+  color: #000;
 }
 h2 {
   margin-left: 0;
@@ -635,9 +636,9 @@ pre tt:after {
 }
 .main {
   position: relative;
-  min-height: 750px;
+  min-height: 850px;
   width: 100%;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   margin-bottom: 200px;
   box-shadow: 10px 58px 85px -25px rgba(0, 0, 0, 0.72);
   z-index: 2;
