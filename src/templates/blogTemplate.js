@@ -9,29 +9,59 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  function toLink(url) {
+    if (url != null) return "/categories/" + url.toLowerCase()
+    else return "#"
+  }
 
   return (
     <Layout>
-      <div className="blog-post-container">
-        <div style={{ textAlign: `center` }} className="blog-post">
-          <h1 style={{ fontSize: `7em` }}>{frontmatter.title}</h1>
-          <h2 style={{ fontSize: `1em` }}>{frontmatter.date}</h2>
-          <div className="img-container">
-            <Image
-              fluid={frontmatter.main_image.childImageSharp.fluid}
-              alt="Main Image"
-            />
+      <div className="blog-post">
+        <div className="title-container">
+          <div className="title-data">
+            <h1 className="title">{frontmatter.title}</h1>
+            <h2 className="date">{frontmatter.date}</h2>
+            <div className="tag-links">
+              <h3>
+                <a className="grow" href={toLink(frontmatter.tags[0])}>
+                  {frontmatter.tags[0]}
+                </a>
+              </h3>
+              <h3>
+                {" "}
+                <a className="grow" href={toLink(frontmatter.tags[1])}>
+                  {frontmatter.tags[1]}
+                </a>
+              </h3>
+              <h3>
+                {" "}
+                <a className="grow" href={toLink(frontmatter.tags[2])}>
+                  {frontmatter.tags[2]}
+                </a>
+              </h3>
+            </div>
           </div>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
+          <Image
+            fluid={frontmatter.main_image.childImageSharp.fluid}
+            alt="Main Image"
           />
-
-          <div className="img-container">
-            <Image
-              fluid={frontmatter.ingredients_image.childImageSharp.fluid}
-              alt="Ingredients Image"
-            />
+        </div>
+        <div className="blog-post-content">
+          <div className="ingredients">
+            <div className="ingredients-img-container">
+              <h2>Ingredients</h2>
+              <Image
+                fluid={frontmatter.ingredients_image.childImageSharp.fluid}
+                alt="Ingredients Image"
+              ></Image>
+            </div>
+          </div>
+          <div className="spacer">
+            <div className="page-break"></div>
+          </div>
+          <div className="method">
+            <h2>Method</h2>
+            <p dangerouslySetInnerHTML={{ __html: html }}></p>
           </div>
         </div>
       </div>
@@ -45,16 +75,12 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
+        tags
         main_image {
           childImageSharp {
-            fluid {
-              aspectRatio
-              base64
-              sizes
-              src
-              srcSet
+            fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
