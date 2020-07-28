@@ -30,6 +30,7 @@ collections:
       - name: "pro-tip"
         label: "Pro Tip"
         widget: "text"
+        required: false
       - name: "ingredients"
         label: "ingredients"
         widget: "list"
