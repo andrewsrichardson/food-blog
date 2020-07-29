@@ -9,10 +9,19 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const { ingredients, method } = frontmatter
+
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
   }
+
+  let ingredientsList = ingredients.map((ing, i) => <li key={i}>{ing}</li>)
+  let methodList = method.map((inst, i) => <li key={i}>{inst}</li>)
+
+  // let methodList = method.forEach((inst, i) => <li key={i + 1}>{inst}</li>)
+
+  console.log(ingredientsList)
 
   return (
     <Layout>
@@ -46,6 +55,9 @@ export default function Template({
             alt="Main Image"
           />
         </div>
+        <div className="description">
+          <h4>{frontmatter.description}</h4>
+        </div>
         <div className="blog-post-content">
           <div className="ingredients">
             <div className="ingredients-img-container">
@@ -54,14 +66,16 @@ export default function Template({
                 fluid={frontmatter.ingredients_image.childImageSharp.fluid}
                 alt="Ingredients Image"
               ></Image>
+              <ul className="ingredients-list">{ingredientsList}</ul>
             </div>
           </div>
           <div className="spacer">
             <div className="page-break"></div>
           </div>
           <div className="method">
+            {/* <h3 id="pro-tip">PRO TIP</h3> */}
             <h2>Method</h2>
-            <p dangerouslySetInnerHTML={{ __html: html }}></p>
+            <ol>{methodList}</ol>
           </div>
         </div>
       </div>
@@ -77,6 +91,9 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        ingredients
+        method
+        description
         main_image {
           childImageSharp {
             fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {
