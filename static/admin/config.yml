@@ -28,7 +28,7 @@ collections:
         label: "description"
         widget: "text"
       - name: "pro_tip"
-        label: "Pro Tip"
+        label: "Pro Tip"git
         widget: "text"
         required: false
       - name: "ingredients"

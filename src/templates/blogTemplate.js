@@ -16,12 +16,19 @@ export default function Template({
     else return "#"
   }
 
-  let ingredientsList = ingredients.map((ing, i) => <li key={i}>{ing}</li>)
-  let methodList = method.map((inst, i) => <li key={i}>{inst}</li>)
-
-  // let methodList = method.forEach((inst, i) => <li key={i + 1}>{inst}</li>)
-
-  console.log(ingredientsList)
+  let ingredientsList = []
+  try {
+    ingredientsList = ingredients.map((ing, i) => <li key={i}>{ing}</li>)
+  } catch (err) {
+    console.log("No ingredients for this page")
+  }
+  let methodList = []
+  try {
+    method.map((inst, i) => <li key={i}>{inst}</li>)
+  } catch (err) {
+    console.log("No method for this page")
+  }
+  const descriptionRef = React.useRef(null)
 
   return (
     <Layout>
@@ -55,7 +62,7 @@ export default function Template({
             alt="Main Image"
           />
         </div>
-        <div className="description">
+        <div className="description" ref={descriptionRef}>
           <h4>{frontmatter.description}</h4>
         </div>
         <div className="blog-post-content">
