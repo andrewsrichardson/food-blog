@@ -24,7 +24,7 @@ export default function Template({
   }
   let methodList = []
   try {
-    method.map((inst, i) => <li key={i}>{inst}</li>)
+    methodList = method.map((inst, i) => <li key={i}>{inst}</li>)
   } catch (err) {
     console.log("No method for this page")
   }
