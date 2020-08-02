@@ -1,14 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-  DotGroup,
-} from "pure-react-carousel"
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import "./Carousel.css"
 
@@ -23,6 +16,7 @@ export default function Carousel() {
               title
               tags
               path
+              description
               main_image {
                 childImageSharp {
                   fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {
@@ -46,7 +40,7 @@ export default function Carousel() {
     .map(edge => (
       <div className="carousel-item-wrapper">
         <div className="carousel-data">
-          <h1 className="title">
+          <h1 id="carousel-title">
             <a href={edge.node.frontmatter.path}>
               {edge.node.frontmatter.title}
             </a>
@@ -69,6 +63,7 @@ export default function Carousel() {
                 {edge.node.frontmatter.tags[2]}
               </a>
             </h3>
+            <h4 className="description">{edge.node.frontmatter.description}</h4>
           </div>
         </div>
         <Image
@@ -82,7 +77,7 @@ export default function Carousel() {
     <div className="carousel-wrapper">
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={120}
+        naturalSlideHeight={100}
         totalSlides={3}
         isPlaying={true}
         infinite={true}
