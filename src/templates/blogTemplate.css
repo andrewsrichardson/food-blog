@@ -88,3 +88,31 @@ li {
   margin-top: 1.1rem;
   max-width: 80rem;
 }
+@media (max-width: 1500px) {
+  .blog-post-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ingredients {
+    width: 90%;
+  }
+  .method {
+    width: 90%;
+  }
+  .title-data {
+    position: relative;
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .title {
+    margin-top: 0px;
+    text-align: center;
+    background-color: white;
+  }
+  .date {
+    margin-top: 1rem;
+    background-color: white;
+  }
+}
