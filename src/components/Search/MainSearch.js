@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import { navigate } from "gatsby"
 import "./MainSearch.css"
-// import PostLink from "../PostLink/PostLink.js"
 
-// Search component
 class Search extends Component {
   state = {
     query: "",
@@ -18,10 +16,16 @@ class Search extends Component {
             className="item_search_result pointer"
             key={i}
             onClick={() => {
-              console.log(page)
               const path = "/" + page.url
               navigate(path)
             }}
+            onKeyDown={() => {
+              const path = "/" + page.url
+              navigate(path)
+            }}
+            role="button"
+            tabIndex="0"
+            aria-label="Link to Post"
           >
             <h1>{page.title}</h1>
           </div>
@@ -46,6 +50,7 @@ class Search extends Component {
             type="text"
             onChange={this.search}
             placeholder={"Search"}
+            aria-label="Search Box"
           />
         </div>
         <div className="search_list">

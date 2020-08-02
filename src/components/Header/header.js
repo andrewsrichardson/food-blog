@@ -4,10 +4,9 @@ import React, { useState } from "react"
 import ToggleMenuButton from "./ToggleMenuButton"
 import "./Header.css"
 import Menu from "./Menu"
-import useDocumentScrollThrottled from "./useDocumentScrollThrottled"
 import Img from "gatsby-image"
 
-export default function Header({ siteTitle }) {
+export default function Header() {
   const data = useStaticQuery(graphql`
     query LogoQuery {
       logo: allFile(filter: { relativePath: { eq: "logo.png" } }) {
@@ -27,34 +26,23 @@ export default function Header({ siteTitle }) {
     }
   `)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [logoInHeader, moveLogo] = useState(false)
+  // const [logoInHeader, moveLogo] = useState(false)
 
-  // let logoSize = logoInHeader ? "small" : ""
-  // if (window.location.pathname !== "/") {
   const logoSize = "small"
-  // }
 
-  const MAX_SCROLL = 80
-  const TIMEOUT_DELAY = 100
+  // const MAX_SCROLL = 80
+  // const TIMEOUT_DELAY = 100
 
-  useDocumentScrollThrottled(callbackData => {
-    const { currentScrollTop } = callbackData
-    const isScrolledDown = currentScrollTop > MAX_SCROLL
-    setTimeout(() => {
-      moveLogo(isScrolledDown)
-    }, TIMEOUT_DELAY)
-  })
+  // useDocumentScrollThrottled(callbackData => {
+  //   const { currentScrollTop } = callbackData
+  //   const isScrolledDown = currentScrollTop > MAX_SCROLL
+  //   setTimeout(() => {
+  //     moveLogo(isScrolledDown)
+  //   }, TIMEOUT_DELAY)
+  // })
 
   const menuToggleClickHandler = () => {
     setMenuOpen(!menuOpen)
-  }
-  const logoStyle = {
-    color: `black`,
-    textDecoration: `none`,
-    // fontSize: `3rem`,
-  }
-  const activeStyle = {
-    color: `pink`,
   }
 
   return (
@@ -70,25 +58,13 @@ export default function Header({ siteTitle }) {
         </div>
         <div className="spacer"></div>
         <div className="nav-link-wrapper">
-          <Link
-            className="nav-link underline"
-            to="/search"
-            activeStyle={{ activeStyle }}
-          >
+          <Link className="nav-link underline" to="/search">
             Search
           </Link>
-          <Link
-            className="nav-link underline"
-            to="/categories"
-            activeStyle={{ activeStyle }}
-          >
+          <Link className="nav-link underline" to="/categories">
             Categories
           </Link>
-          <Link
-            className="nav-link underline"
-            to="/about"
-            activeStyle={{ activeStyle }}
-          >
+          <Link className="nav-link underline" to="/about">
             About
           </Link>
         </div>
