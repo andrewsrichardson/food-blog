@@ -6,7 +6,7 @@ import "./PostLink.css"
 const PostLink = ({ post }) => (
   <div
     className="post-wrapper border"
-    onClick={() => navigate(post.frontmatter.path)}
+    onClick={() => navigate("../../" + post.frontmatter.path)}
     role="button"
     tabIndex="0"
     onKeyDown={() => navigate(post.frontmatter.path)}

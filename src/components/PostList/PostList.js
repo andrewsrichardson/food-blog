@@ -48,9 +48,10 @@ export default props => {
         edge.node.frontmatter.tags.includes(props.filter)
       ) {
         return edge
-      } else {
+      } else if (props.filter == null) {
         return edge
       }
+      return null
     }) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 

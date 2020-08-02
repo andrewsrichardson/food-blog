@@ -70,7 +70,6 @@ export default function Footer() {
       }
     }
   `)
-  console.log(data)
   return (
     <footer className="footer">
       <div className="socials">

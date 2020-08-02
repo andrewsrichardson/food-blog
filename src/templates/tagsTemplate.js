@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
-
+import "./tagsTemplate.css"
 import PostList from "../components/PostList/PostList"
 
 // Components
@@ -13,11 +13,13 @@ const Tags = ({ pageContext, data }) => {
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
-  console.log(tag)
   return (
     <Layout>
-      <h1>{tagHeader}</h1>
-      <PostList filter={tag} />
+      <div className="tagged-posts">
+        {" "}
+        <h1>{tagHeader}</h1>
+        <PostList filter={tag} />
+      </div>
     </Layout>
   )
 }
