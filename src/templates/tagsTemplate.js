@@ -6,6 +6,7 @@ import PostList from "../components/PostList/PostList"
 
 // Components
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -15,6 +16,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
   return (
     <Layout>
+      <SEO title={tag} description={"All posts tagged with " + tag} />
       <div className="tagged-posts">
         {" "}
         <h1>{tagHeader}</h1>

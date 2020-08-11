@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
 import "./blogTemplate.css"
+import SEO from "../components/seo"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -32,6 +33,12 @@ export default function Template({
 
   return (
     <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.ingredients_image.childImageSharp.fluid}
+        pathname={frontmatter.path}
+      />
       <div className="blog-post">
         <div className="title-container">
           <div className="title-data">
@@ -95,6 +102,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        path
         title
         tags
         ingredients
