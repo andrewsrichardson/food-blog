@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Trust This Feast`,
-    description: `Cool food here`,
+    description: `🍜Hearty hella-seasoned food 🌮Lazy munches, tasty brunches, simple lunches and big fat feasts ♥️ Uncomplicated and so worth it #TrustThisFeast`,
     author: `@andrewsrichardson`,
   },
 
