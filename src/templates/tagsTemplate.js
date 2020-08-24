@@ -1,26 +1,45 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import Layout from "../components/layout"
 import "./tagsTemplate.css"
-import PostList from "../components/PostList/PostList"
+
+import search from "../util/search"
 
 // Components
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import PostList from "../components/PostList/PostList"
+import Layout from "../components/layout"
 
 const Tags = ({ pageContext, data }) => {
+  const [results, setResults] = useState([])
+
   const { tag } = pageContext
   const { totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
+
+  function handleSearchInput(event) {
+    if (event.key === "Enter") {
+      const searchTerm = event.target.value
+      setResults(search(searchTerm))
+    }
+  }
+
   return (
     <Layout>
       <SEO title={tag} description={"All posts tagged with " + tag} />
       <div className="tagged-posts">
         {" "}
         <h1>{tagHeader}</h1>
-        <PostList filter={tag} />
+        <input
+          className="search_input"
+          type="text"
+          onKeyDown={event => handleSearchInput(event)}
+          placeholder={"Search"}
+          aria-label="Search Box"
+        />
+        <PostList tagFilter={tag} searchFilter={results} />
       </div>
     </Layout>
   )

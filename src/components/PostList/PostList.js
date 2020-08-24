@@ -40,20 +40,45 @@ export default props => {
       }
     }
   `)
+  console.log(props.searchFilter)
   const edges = data.allMarkdownRemark.edges
-  const Posts = edges
-    .filter(edge => {
-      if (
-        (edge.node.frontmatter.tags != null) &
-        edge.node.frontmatter.tags.includes(props.filter)
-      ) {
-        return edge
-      } else if (props.filter == null) {
-        return edge
-      }
-      return null
-    }) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+  const Posts = edges.filter(edge => {
+    if (
+      (edge.node.frontmatter.tags != null) &
+      edge.node.frontmatter.tags.includes(props.tagFilter)
+    ) {
+      return edge
+    } else if (props.tagFilter == null) {
+      return edge
+    }
+  }) // You can filter your posts based on some criteria
 
-  return <div className="post-list-wrapper">{Posts}</div>
+  const filteredPosts = Posts.filter(edge => {
+    let result = null
+    for (var i = 0; i < props.searchFilter; ++i) {
+      if (edge.node.frontmatter.title === result.title) {
+        result = edge
+      }
+      if (result != null) {
+        break
+      }
+    }
+    // props.searchFilter.forEach(result => {
+    //   console.log(edge.node.frontmatter.title + " = " + result.title)
+    //   if (edge.node.frontmatter.title === result.title) {
+    //     result = edge
+    //     break
+    //   }
+    // })
+    if (props.searchFilter.length === 0) {
+      result = edge
+    }
+
+    if (result != null) {
+      return result
+    }
+    console.log(result)
+  }).map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+
+  return <div className="post-list-wrapper">{filteredPosts}</div>
 }
