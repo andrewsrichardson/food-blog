@@ -59,7 +59,7 @@ export default function Header() {
         <div className="spacer"></div>
         <div className="nav-link-wrapper">
           <Link className="nav-link underline" to="/categories">
-            Categories
+            Recipes
           </Link>
           <Link className="nav-link underline" to="/about">
             About

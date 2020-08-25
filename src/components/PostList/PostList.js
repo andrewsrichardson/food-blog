@@ -71,7 +71,6 @@ export default props => {
       if (result != null) {
         return result
       }
-      console.log(result)
     } else return edge
   }).map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
