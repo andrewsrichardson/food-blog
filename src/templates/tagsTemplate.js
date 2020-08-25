@@ -12,9 +12,7 @@ import PostList from "../components/PostList/PostList"
 import Layout from "../components/layout"
 
 const Tags = ({ pageContext, data, location }) => {
-  const initialSearchTerm = location.state.searchTerm
-    ? location.state.searchTerm
-    : ""
+  const initialSearchTerm = location ? location.state.searchTerm : ""
 
   const [results, setResults] = useState(search(initialSearchTerm))
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
