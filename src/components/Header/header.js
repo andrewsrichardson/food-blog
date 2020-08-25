@@ -58,9 +58,6 @@ export default function Header() {
         </div>
         <div className="spacer"></div>
         <div className="nav-link-wrapper">
-          <Link className="nav-link underline" to="/search">
-            Search
-          </Link>
           <Link className="nav-link underline" to="/categories">
             Categories
           </Link>
