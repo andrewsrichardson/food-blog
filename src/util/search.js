@@ -1,7 +1,9 @@
 export default function search(query) {
-  if (typeof window !== undefined) {
-    var index = window.__FLEXSEARCH__.en.index
-    var store = window.__FLEXSEARCH__.en.store
+  let index = []
+  let store = []
+  if (typeof window !== "undefined") {
+    index = window.__FLEXSEARCH__.en.index
+    store = window.__FLEXSEARCH__.en.store
     if (!query || !index) {
       return []
     } else {
@@ -18,6 +20,5 @@ export default function search(query) {
 
       return nodes
     }
-  }
-  return null
+  } else return []
 }
