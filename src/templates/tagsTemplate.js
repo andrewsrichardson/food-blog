@@ -39,29 +39,34 @@ const Tags = ({ pageContext, data, location }) => {
       <SEO title={tag} description={"All posts tagged with " + tag} />
       <div className="tagged-posts">
         {" "}
-        <h1>{tagHeader}</h1>
-        <input
-          className="search_input"
-          type="text"
-          onKeyDown={event => handleSearchInput(event)}
-          placeholder={"Search"}
-          aria-label="Search Box"
-          defaultValue={initialSearchTerm}
-        />
-        <h1>Categories</h1>
-        <ul>
-          {group.map(tag => (
-            <li key={tag.fieldValue}>
-              <Link
-                to={`/categories/${lo.kebabCase(tag.fieldValue)}/`}
-                state={{ searchTerm: searchTerm }}
-              >
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <PostList tagFilter={tag} searchFilter={results} />
+        <div className="categories-sidebar">
+          <h1>Categories</h1>
+
+          <ul>
+            {group.map(tag => (
+              <li key={tag.fieldValue}>
+                <Link
+                  to={`/categories/${lo.kebabCase(tag.fieldValue)}/`}
+                  state={{ searchTerm: searchTerm }}
+                >
+                  {tag.fieldValue} ({tag.totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="content">
+          <h1>{tagHeader}</h1>
+          <input
+            className="search_input"
+            type="text"
+            onKeyDown={event => handleSearchInput(event)}
+            placeholder={"Search"}
+            aria-label="Search Box"
+            defaultValue={initialSearchTerm}
+          />
+          <PostList tagFilter={tag} searchFilter={results} />
+        </div>
       </div>
     </Layout>
   )

@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Carousel />
-    <PostList />
+    <PostList searchFilter={""} />
   </Layout>
 )
 

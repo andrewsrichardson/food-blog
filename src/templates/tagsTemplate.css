@@ -1,3 +1,7 @@
 .tagged-posts {
   margin-top: 6rem;
+  display: flex;
+}
+.categories-sidebar {
+  width: 300px;
 }
