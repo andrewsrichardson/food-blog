@@ -40,7 +40,7 @@ export default props => {
       }
     }
   `)
-  console.log(props.searchFilter)
+
   const edges = data.allMarkdownRemark.edges
   const Posts = edges.filter(edge => {
     if (
@@ -54,30 +54,25 @@ export default props => {
   }) // You can filter your posts based on some criteria
 
   const filteredPosts = Posts.filter(edge => {
-    let result = null
-    for (var i = 0; i < props.searchFilter; ++i) {
-      if (edge.node.frontmatter.title === result.title) {
+    if (props.searchFilter !== undefined) {
+      let result = null
+      for (var i = 0; i < props.searchFilter.length; ++i) {
+        if (edge.node.frontmatter.title === props.searchFilter[i].title) {
+          result = edge
+        }
+        if (result != null) {
+          break
+        }
+      }
+      if (props.searchFilter.length === 0) {
         result = edge
       }
-      if (result != null) {
-        break
-      }
-    }
-    // props.searchFilter.forEach(result => {
-    //   console.log(edge.node.frontmatter.title + " = " + result.title)
-    //   if (edge.node.frontmatter.title === result.title) {
-    //     result = edge
-    //     break
-    //   }
-    // })
-    if (props.searchFilter.length === 0) {
-      result = edge
-    }
 
-    if (result != null) {
-      return result
-    }
-    console.log(result)
+      if (result != null) {
+        return result
+      }
+      console.log(result)
+    } else return edge
   }).map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return <div className="post-list-wrapper">{filteredPosts}</div>

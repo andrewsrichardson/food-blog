@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import lo from "lodash"
 import "./categories.css"
+import PostList from "../components/PostList/PostList"
 
 const CategoriesPage = ({
   data: {
@@ -23,6 +24,7 @@ const CategoriesPage = ({
           </li>
         ))}
       </ul>
+      <PostList searchFilter={[]}></PostList>
     </div>
   </Layout>
 )
