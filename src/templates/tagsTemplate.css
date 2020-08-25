@@ -1,7 +1,46 @@
 .tagged-posts {
-  margin-top: 6rem;
+  margin-top: 5rem;
   display: flex;
+  min-height: 1000px;
 }
 .categories-sidebar {
   width: 300px;
+  border: 1px solid lightgray;
+}
+.categories-title {
+  margin-bottom: 1 rem;
+  text-align: center;
+}
+.btn {
+  width: 150px;
+  margin: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+.active {
+  background: #f69d65;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 0px;
+  border-right: 1px solid lightgray;
+}
+.content {
+  width: 100%;
+}
+.title-items {
+  position: relative;
+  display: flex;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid lightgray;
+}
+.tag-header {
+  width: 50%;
+}
+.search-input {
+  width: 40%;
 }

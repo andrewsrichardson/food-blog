@@ -10,6 +10,7 @@ import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import PostList from "../components/PostList/PostList"
 import Layout from "../components/layout"
+import CategoriesList from "../components/CategoriesList/CategoriesList"
 
 const Tags = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
@@ -32,37 +33,50 @@ const Tags = ({ pageContext, data, location }) => {
     }
   }
 
+  const TabLink = props => (
+    <Link
+      {...props}
+      getProps={({ isCurrent }) => {
+        return {
+          className: isCurrent ? "btn grow active" : "btn grow",
+        }
+      }}
+    />
+  )
+
   return (
     <Layout>
       <SEO title={tag} description={"All posts tagged with " + tag} />
       <div className="tagged-posts">
         {" "}
         <div className="categories-sidebar">
-          <h1>Categories</h1>
-
+          <h4 className="categories-title">Categories</h4>
           <ul>
             {group.map(tag => (
               <li key={tag.fieldValue}>
-                <Link
+                <TabLink
                   to={`/categories/${lo.kebabCase(tag.fieldValue)}/`}
                   state={{ searchTerm: searchTerm }}
                 >
                   {tag.fieldValue} ({tag.totalCount})
-                </Link>
+                </TabLink>
               </li>
             ))}
           </ul>
         </div>
         <div className="content">
-          <h1>{tagHeader}</h1>
-          <input
-            className="search_input"
-            type="text"
-            onKeyDown={event => handleSearchInput(event)}
-            placeholder={"Search"}
-            aria-label="Search Box"
-            defaultValue={initialSearchTerm}
-          />
+          <div className="title-items">
+            <h1 className="tag-header">{tagHeader}</h1>
+            <input
+              className="search-input"
+              type="text"
+              onKeyDown={event => handleSearchInput(event)}
+              placeholder={"Search"}
+              aria-label="Search Box"
+              defaultValue={initialSearchTerm}
+            />
+          </div>
+
           <PostList tagFilter={tag} searchFilter={results} />
         </div>
       </div>
