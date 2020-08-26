@@ -7,12 +7,12 @@
 .carousel {
   max-width: 1808px;
   min-width: 1808px;
-  max-height: 1017px;
   min-height: 1017px;
   z-index: 0;
 }
 .carousel__slider {
-  /* max-height: inherit; */
+  padding-bottom: 0;
+  max-height: 1017px;
 }
 .gatsby-image-wrapper {
   position: relative;
@@ -60,6 +60,9 @@
   background-color: #f69d65;
   line-height: 5rem;
 }
+.slider-item {
+  padding-bottom: 0px;
+}
 
 @media (max-width: 1500px) {
   .carousel-wrapper {
@@ -106,8 +109,5 @@
   .carousel__slider {
     position: relative;
     max-height: 100%;
-  }
-  .slider-item {
-    padding-bottom: 0px;
   }
 }
