@@ -1,17 +1,16 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import "./categories.css"
-
+//functions
 import search from "../util/search"
 import lo from "lodash"
 
 // Components
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PostList from "../components/PostList/PostList"
 import Layout from "../components/layout"
-import CategoriesList from "../components/CategoriesList/CategoriesList"
-import GatsbyImage from "gatsby-image"
+import FilterRemover from "../components/CategoriesComponents/FilterRemover"
+import TabLink from "../components/CategoriesComponents/TabLink"
 
 const CategoriesPage = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
@@ -20,13 +19,7 @@ const CategoriesPage = ({ pageContext, data, location }) => {
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
 
   const { tag } = pageContext
-  const { totalCount } = data.postData
   const { group } = data.tagsData
-  const { cross } = data
-
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
 
   function handleSearchInput(event) {
     if (event.key === "Enter") {
@@ -37,58 +30,6 @@ const CategoriesPage = ({ pageContext, data, location }) => {
   function handleClearSearchInput() {
     setSearchTerm("")
     setResults(search(""))
-  }
-
-  function FilterRemover() {
-    const [hasSearch, setHasSearch] = useState(false)
-    console.log(searchTerm)
-
-    if (searchTerm !== "") {
-      return (
-        <div className={hasSearch ? "filter-remover" : "filter-remover"}>
-          <li className="btn active">{searchTerm}</li>
-          <div
-            className="cross-search-wrapper"
-            // type="reset"
-            onClick={() => handleClearSearchInput()}
-          >
-            <GatsbyImage
-              className={"cross-search"}
-              fixed={cross.nodes[0].childImageSharp.fixed}
-              alt="Clear Search Filter"
-            ></GatsbyImage>
-          </div>
-        </div>
-      )
-    }
-    return null
-  }
-
-  function TabLink(props) {
-    const [isActive, setIsActive] = useState(false)
-    return (
-      <div>
-        <Link
-          {...props}
-          getProps={({ isCurrent }) => {
-            setIsActive(isCurrent)
-            console.log(isActive)
-            return {
-              className: isCurrent ? "btn grow active" : "btn grow",
-            }
-          }}
-        />
-        <Link
-          to={"/categories"}
-          className={isActive ? "cross" : "cross hidden"}
-        >
-          <GatsbyImage
-            fixed={cross.nodes[0].childImageSharp.fixed}
-            alt="Clear Category"
-          ></GatsbyImage>
-        </Link>
-      </div>
-    )
   }
 
   return (
@@ -114,7 +55,10 @@ const CategoriesPage = ({ pageContext, data, location }) => {
         <div className="content">
           <div className="title-items">
             <h1 className="tag-header">All Recipes</h1>
-            <FilterRemover searchTerm={searchTerm}></FilterRemover>
+            <FilterRemover
+              searchTerm={searchTerm}
+              handleClearSearchInput={handleClearSearchInput}
+            ></FilterRemover>
             <input
               className="search-input"
               type="text"
@@ -153,20 +97,6 @@ export const pageQuery = graphql`
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
-      }
-    }
-    cross: allFile(filter: { relativePath: { eq: "cross.png" } }) {
-      nodes {
-        childImageSharp {
-          fixed(width: 15, height: 15) {
-            aspectRatio
-            base64
-            height
-            src
-            srcSet
-            width
-          }
-        }
       }
     }
   }
