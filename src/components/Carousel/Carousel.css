@@ -41,15 +41,19 @@
 .tags-list {
   display: flex;
 }
-.tags-list > h3 {
+.tags-list > h3,
+h4 {
   margin-right: 2rem;
   margin-top: 1.5rem;
-  background-color: #c19997;
+  opacity: 1;
 }
 .tags-list > h3 > a {
   text-decoration: none;
   color: black;
-  opacity: 0.5;
+  background-color: #c19997;
+}
+.tags-list > h4 {
+  background-color: #c19997;
 }
 #carousel-title {
   font-size: 4rem;

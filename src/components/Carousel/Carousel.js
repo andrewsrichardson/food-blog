@@ -63,7 +63,7 @@ export default function Carousel() {
                 {edge.node.frontmatter.tags[2]}
               </a>
             </h3>
-            <h4 className="description">{edge.node.frontmatter.description}</h4>
+            <h4>{edge.node.frontmatter.description}</h4>
           </div>
         </div>
         <Image
