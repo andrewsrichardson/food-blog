@@ -17,8 +17,6 @@ const PostLink = ({ post }) => {
   }
 
   const TagList = post.frontmatter.tags.map(toLink)
-
-  console.log(TagList)
   return (
     <div className="post-wrapper border">
       <div
@@ -37,7 +35,7 @@ const PostLink = ({ post }) => {
         </div>
       </div>
       <div className="title-wrapper">
-        <Link className="post-title grow" to={post.frontmatter.path}>
+        <Link className="post-title underline" to={post.frontmatter.path}>
           {post.frontmatter.title}
         </Link>
         <div className="post-categories">{TagList}</div>
