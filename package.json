@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Andrew Richardson",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "flexsearch": "^0.6.32",
     "formik": "^2.1.4",
     "gatsby": "^2.23.1",
