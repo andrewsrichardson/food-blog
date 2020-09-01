@@ -8,8 +8,8 @@ function getWindowDimensions() {
       height,
     }
   } catch {
-    const width = 0
-    const height = 0
+    const width = 1800
+    const height = 900
     return {
       width,
       height,

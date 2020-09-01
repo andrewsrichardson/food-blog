@@ -33,6 +33,7 @@ export default function Carousel() {
   `)
 
   const { width } = useWindowDimensions()
+  console.log(width)
   let slideHeight = 9
   if (width < 769) {
     slideHeight = 16
