@@ -8,7 +8,11 @@ function getWindowDimensions() {
       height,
     }
   } catch {
-    console.log("no windows allowed")
+      const width, height = 0
+    return{
+        width,
+        height
+    }
   }
 }
 
