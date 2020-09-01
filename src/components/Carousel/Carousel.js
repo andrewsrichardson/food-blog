@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import "./Carousel.css"
+import useWindowDimensions from "../../hooks/useWindowDimensions"
 
 export default function Carousel() {
   const data = useStaticQuery(graphql`
@@ -19,7 +20,7 @@ export default function Carousel() {
               description
               main_image {
                 childImageSharp {
-                  fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {
+                  fluid(maxWidth: 2048, maxHeight: 1152, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -30,6 +31,16 @@ export default function Carousel() {
       }
     }
   `)
+
+  const { width } = useWindowDimensions()
+  let slideHeight = 9
+  if (width < 769) {
+    slideHeight = 16
+  }
+  if (width < 400) {
+    slideHeight = 19
+  }
+
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
@@ -74,28 +85,25 @@ export default function Carousel() {
       </div>
     ))
   return (
-    <div className="carousel-wrapper">
-      <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={100}
-        totalSlides={3}
-        isPlaying={true}
-        infinite={true}
-        className="border"
-      >
-        <DotGroup className="border" />
-        <Slider className="slider">
-          <Slide className="slider-item" index={0}>
-            {Posts[0]}
-          </Slide>
-          <Slide className="slider-item" index={1}>
-            {Posts[1]}
-          </Slide>
-          <Slide className="slider-item" index={2}>
-            {Posts[2]}
-          </Slide>
-        </Slider>
-      </CarouselProvider>
-    </div>
+    <CarouselProvider
+      naturalSlideWidth={16}
+      naturalSlideHeight={slideHeight}
+      totalSlides={3}
+      isPlaying={true}
+      infinite={true}
+    >
+      <DotGroup />
+      <Slider className="slider">
+        <Slide className="slider-item" index={0}>
+          {Posts[0]}
+        </Slide>
+        <Slide className="slider-item" index={1}>
+          {Posts[1]}
+        </Slide>
+        <Slide className="slider-item" index={2}>
+          {Posts[2]}
+        </Slide>
+      </Slider>
+    </CarouselProvider>
   )
 }
