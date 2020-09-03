@@ -19,19 +19,27 @@ import useWindowDimensions from "../hooks/useWindowDimensions"
 const Tags = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
 
+  const pageLocation = location.state ? location.pathname : "/"
+
   const [results, setResults] = useState(search(initialSearchTerm))
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
+  const [currentPage, setCurrentPage] = useState(pageLocation)
 
   const { width } = useWindowDimensions()
-  const defaultValue = location.pathname ? location.pathname : ""
 
   const { tag } = pageContext
   const { totalCount } = data.postData
   const { group } = data.tagsData
 
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  let tagHeader = "All Recipes"
+  let description = "All Recipes"
+
+  if (tag !== undefined) {
+    description = "All posts tagged with " + tag
+    tagHeader = `${totalCount} post${
+      totalCount === 1 ? "" : "s"
+    } tagged with "${tag}"`
+  }
 
   function handleSearchInput(event) {
     if (event.key === "Enter") {
@@ -46,7 +54,7 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO title={tag} description={"All posts tagged with " + tag} />
+      <SEO title={tagHeader} description={description} />
       <div className="tagged-posts">
         {" "}
         {width > 769 ? (
@@ -54,7 +62,7 @@ const Tags = ({ pageContext, data, location }) => {
         ) : null}
         <div className="content">
           <div className="title-items">
-            <h1 className="tag-header">{tagHeader}</h1>
+            <h1 className="tag-header">{description}</h1>
             <FilterRemover
               searchTerm={searchTerm}
               handleClearSearchInput={handleClearSearchInput}
@@ -70,7 +78,7 @@ const Tags = ({ pageContext, data, location }) => {
               <CategoriesPicker
                 group={group}
                 searchTerm={searchTerm}
-                defaultValue={defaultValue}
+                currentPage={currentPage}
               />
             ) : null}
           </div>

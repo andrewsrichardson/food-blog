@@ -94,4 +94,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+
+  createPage({
+    path: `/categories/`,
+    component: tagsTemplate,
+    context: {},
+  })
 }
