@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import "./categories.css"
 //functions
 import search from "../util/search"
-import lo from "lodash"
 
 // Components
 import { graphql } from "gatsby"
@@ -10,10 +9,16 @@ import SEO from "../components/seo"
 import PostList from "../components/PostList/PostList"
 import Layout from "../components/layout"
 import FilterRemover from "../components/CategoriesComponents/FilterRemover"
-import TabLink from "../components/CategoriesComponents/TabLink"
+import CategoriesSidebar from "../components/CategoriesComponents/CategoriesSidebar"
+import CategoriesPicker from "../components/CategoriesComponents/CategoriesPicker"
+
+import useWindowDimensions from "../hooks/useWindowDimensions"
 
 const CategoriesPage = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
+
+  const { width } = useWindowDimensions()
+  const defaultValue = location.pathname ? location.pathname : ""
 
   const [results, setResults] = useState(search(initialSearchTerm))
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
@@ -34,24 +39,12 @@ const CategoriesPage = ({ pageContext, data, location }) => {
 
   return (
     <Layout>
-      <SEO title={tag} description={"All posts tagged with " + tag} />
+      <SEO title={"Categories"} description={"All Recipes"} />
       <div className="tagged-posts">
         {" "}
-        <div className="categories-sidebar">
-          <h4 className="categories-title">Categories</h4>
-          <ul>
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <TabLink
-                  to={`/categories/${lo.kebabCase(tag.fieldValue)}/`}
-                  state={{ searchTerm: searchTerm }}
-                >
-                  {tag.fieldValue} ({tag.totalCount})
-                </TabLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {width > 769 ? (
+          <CategoriesSidebar group={group} searchTerm={searchTerm} />
+        ) : null}
         <div className="content">
           <div className="title-items">
             <h1 className="tag-header">All Recipes</h1>
@@ -66,6 +59,13 @@ const CategoriesPage = ({ pageContext, data, location }) => {
               placeholder={"Search"}
               aria-label="Search Box"
             />
+            {width < 769 ? (
+              <CategoriesPicker
+                group={group}
+                searchTerm={searchTerm}
+                defaultValue={defaultValue}
+              />
+            ) : null}
           </div>
           <PostList tagFilter={tag} searchFilter={results} />
         </div>

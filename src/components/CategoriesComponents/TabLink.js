@@ -28,9 +28,8 @@ export default function TabLink(props) {
         {...props}
         getProps={({ isCurrent }) => {
           setIsActive(isCurrent)
-          console.log(isActive)
           return {
-            className: isCurrent ? "btn grow active" : "btn grow",
+            className: isCurrent ? "btn active" : "btn grow",
           }
         }}
       />

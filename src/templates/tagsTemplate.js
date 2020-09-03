@@ -1,24 +1,29 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import "./tagsTemplate.css"
+import "../pages/categories.css"
 
 //functions
 import search from "../util/search"
-import lo from "lodash"
 
 // Components
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PostList from "../components/PostList/PostList"
 import Layout from "../components/layout"
-import TabLink from "../components/CategoriesComponents/TabLink"
 import FilterRemover from "../components/CategoriesComponents/FilterRemover"
+import CategoriesSidebar from "../components/CategoriesComponents/CategoriesSidebar"
+import CategoriesPicker from "../components/CategoriesComponents/CategoriesPicker"
+
+import useWindowDimensions from "../hooks/useWindowDimensions"
 
 const Tags = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
 
   const [results, setResults] = useState(search(initialSearchTerm))
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm)
+
+  const { width } = useWindowDimensions()
+  const defaultValue = location.pathname ? location.pathname : ""
 
   const { tag } = pageContext
   const { totalCount } = data.postData
@@ -44,21 +49,9 @@ const Tags = ({ pageContext, data, location }) => {
       <SEO title={tag} description={"All posts tagged with " + tag} />
       <div className="tagged-posts">
         {" "}
-        <div className="categories-sidebar">
-          <h4 className="categories-title">Categories</h4>
-          <ul>
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <TabLink
-                  to={`/categories/${lo.kebabCase(tag.fieldValue)}/`}
-                  state={{ searchTerm: searchTerm }}
-                >
-                  {tag.fieldValue} ({tag.totalCount})
-                </TabLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {width > 769 ? (
+          <CategoriesSidebar group={group} searchTerm={searchTerm} />
+        ) : null}
         <div className="content">
           <div className="title-items">
             <h1 className="tag-header">{tagHeader}</h1>
@@ -73,6 +66,13 @@ const Tags = ({ pageContext, data, location }) => {
               placeholder={"Search"}
               aria-label="Search Box"
             />
+            {width < 769 ? (
+              <CategoriesPicker
+                group={group}
+                searchTerm={searchTerm}
+                defaultValue={defaultValue}
+              />
+            ) : null}
           </div>
           <PostList tagFilter={tag} searchFilter={results} />
         </div>

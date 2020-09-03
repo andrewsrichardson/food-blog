@@ -1,0 +1,23 @@
+.categories-sidebar {
+  width: 300px;
+  border: 1px solid lightgray;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 0px;
+}
+.categories-title {
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.btn {
+  width: 150px;
+  margin: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+}
