@@ -16,6 +16,7 @@ export default props => {
               title
               path
               tags
+              time
               main_image {
                 childImageSharp {
                   fluid {

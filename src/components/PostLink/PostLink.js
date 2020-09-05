@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 import Image from "gatsby-image"
 import "./PostLink.css"
 import lo from "lodash"
+import parseTime from "../../util/parseTimeToCook"
 
 const PostLink = ({ post }) => {
   function toLink(tag) {
@@ -15,6 +16,7 @@ const PostLink = ({ post }) => {
       </Link>
     )
   }
+  let time = parseTime(post.frontmatter.time)
 
   const TagList = post.frontmatter.tags.map(toLink)
   return (
@@ -35,9 +37,10 @@ const PostLink = ({ post }) => {
         </div>
       </div>
       <div className="title-wrapper">
-        <Link className="post-title underline" to={post.frontmatter.path}>
+        <Link className="post-title underline" to={"/" + post.frontmatter.path}>
           {post.frontmatter.title}
         </Link>
+        <p className="grow post-time">{time}</p>
         <div className="post-categories">{TagList}</div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Image from "gatsby-image"
 import "./blogTemplate.css"
 import SEO from "../components/seo"
+import parseTime from "../util/parseTimeToCook"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,7 +13,6 @@ export default function Template({
   const { frontmatter } = markdownRemark
   const { ingredients, method } = frontmatter
 
-  console.log(frontmatter)
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
@@ -32,12 +32,7 @@ export default function Template({
   }
   const descriptionRef = React.useRef(null)
 
-  const time = " minutes"
-  if (frontmatter.time == 60) {
-    time = " hour"
-  } else if (frontmatter.time == 120) {
-    time = " hours"
-  }
+  const time = parseTime(frontmatter.time)
 
   return (
     <Layout>
@@ -79,7 +74,7 @@ export default function Template({
         </div>
         <div className="description" ref={descriptionRef}>
           <h4>{frontmatter.description}</h4>
-          <p>{"Time to Cook: " + frontmatter.time + time}</p>
+          <p>{"Time to Cook: " + time}</p>
         </div>
         <div className="blog-post-content">
           <div className="ingredients">

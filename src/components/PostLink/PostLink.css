@@ -36,6 +36,7 @@ a.post-title {
   text-decoration: none;
   font-family: "Hind Madurai", Times, serif;
   max-width: 50%;
+  margin: auto;
 }
 .post-categories {
   text-align: right;
@@ -44,6 +45,12 @@ a.post-title {
 .post-categories > a {
   margin-right: 1rem;
   color: grey;
+  height: 100%;
+}
+.post-time {
+  color: grey;
+  flex-grow: 3;
+  margin: 0px;
 }
 @media (max-width: 768px) {
   .post-list-wrapper {
