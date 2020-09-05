@@ -12,6 +12,7 @@ export default function Template({
   const { frontmatter } = markdownRemark
   const { ingredients, method } = frontmatter
 
+  console.log(frontmatter)
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
@@ -30,6 +31,13 @@ export default function Template({
     console.log("No method for this page")
   }
   const descriptionRef = React.useRef(null)
+
+  const time = " minutes"
+  if (frontmatter.time == 60) {
+    time = " hour"
+  } else if (frontmatter.time == 120) {
+    time = " hours"
+  }
 
   return (
     <Layout>
@@ -71,6 +79,7 @@ export default function Template({
         </div>
         <div className="description" ref={descriptionRef}>
           <h4>{frontmatter.description}</h4>
+          <p>{"Time to Cook: " + frontmatter.time + time}</p>
         </div>
         <div className="blog-post-content">
           <div className="ingredients">
@@ -87,7 +96,12 @@ export default function Template({
             <div className="page-break"></div>
           </div>
           <div className="method">
-            {/* <h3 id="pro-tip">PRO TIP</h3> */}
+            {frontmatter.pro_tip ? (
+              <div className="pro-tip">
+                <h3>PRO TIP</h3>
+                <p>{frontmatter.pro_tip}</p>
+              </div>
+            ) : null}
             <h2>Method</h2>
             <ol>{methodList}</ol>
           </div>
@@ -108,6 +122,8 @@ export const pageQuery = graphql`
         ingredients
         method
         description
+        pro_tip
+        time
         main_image {
           childImageSharp {
             fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {

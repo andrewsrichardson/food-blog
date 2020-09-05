@@ -27,7 +27,7 @@ collections:
       - name: "description"
         label: "description"
         widget: "text"
-      - name: "pro-tip"
+      - name: "pro_tip"
         label: "Pro Tip"
         widget: "text"
         required: false
