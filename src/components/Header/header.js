@@ -5,6 +5,7 @@ import ToggleMenuButton from "./ToggleMenuButton"
 import "./Header.css"
 import Menu from "./Menu"
 import Img from "gatsby-image"
+import Search from "./search"
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -26,20 +27,8 @@ export default function Header() {
     }
   `)
   const [menuOpen, setMenuOpen] = useState(false)
-  // const [logoInHeader, moveLogo] = useState(false)
 
   const logoSize = "small"
-
-  // const MAX_SCROLL = 80
-  // const TIMEOUT_DELAY = 100
-
-  // useDocumentScrollThrottled(callbackData => {
-  //   const { currentScrollTop } = callbackData
-  //   const isScrolledDown = currentScrollTop > MAX_SCROLL
-  //   setTimeout(() => {
-  //     moveLogo(isScrolledDown)
-  //   }, TIMEOUT_DELAY)
-  // })
 
   const menuToggleClickHandler = () => {
     setMenuOpen(!menuOpen)
@@ -64,8 +53,8 @@ export default function Header() {
           <Link className="nav-link underline" to="/about">
             About
           </Link>
+          <Search />
         </div>
-
         <div className="menu-button">
           <ToggleMenuButton click={menuToggleClickHandler} />
         </div>

@@ -19,8 +19,7 @@ function Menu(props) {
     <div className="menu-wrap">
       <div className={openMenu}>
         <ul>
-          <ListLink to="/search">Search</ListLink>
-          <ListLink to="/categories">Categories</ListLink>
+          <ListLink to="/categories">All Recipes</ListLink>
           <ListLink to="/about">About</ListLink>
           <ListLink to="/Contact">Contact</ListLink>
         </ul>

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import PostLink from "../PostLink/PostLink.js"
+import "./search.css"
+import { Link } from "gatsby"
 
 // Search component
 class Search extends Component {
@@ -11,15 +12,13 @@ class Search extends Component {
   render() {
     const ResultList = () => {
       if (this.state.results.length > 0) {
-        return this.state.results.map((page, i) => (
-          <div className="item-search" key={i}>
-            {console.log(page)}
-            {console.log(i)}
-
-            <p>{page.title}</p>
-            <p>test</p>
-          </div>
-        ))
+        return this.state.results.map((page, i) => {
+          return (
+            <div className="item-search underline" key={i}>
+              <Link href={"/" + page.url}>{page.title}</Link>
+            </div>
+          )
+        })
       } else if (this.state.query.length > 2) {
         return "No results for " + this.state.query
       } else if (
@@ -33,14 +32,14 @@ class Search extends Component {
     }
 
     return (
-      <div className={this.props.classNames}>
+      <div className="search-wrapper nav-link">
         <input
-          className="search__input"
+          className="search-input small-input"
           type="text"
           onChange={this.search}
           placeholder={"Search"}
         />
-        <div className="search__list">
+        <div className="search-list">
           <ResultList />
         </div>
       </div>

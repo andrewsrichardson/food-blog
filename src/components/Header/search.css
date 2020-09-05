@@ -1,0 +1,28 @@
+.search-wrapper {
+  position: relative;
+  width: 6rem;
+  display: flex;
+  align-content: center;
+  margin-left: 40px;
+}
+.search-list {
+  position: absolute;
+  z-index: 1;
+  top: 3.5rem;
+  right: 1px;
+  width: 15rem;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: white;
+}
+.item-search {
+  padding: 0.5rem;
+}
+.item-search > a {
+  text-decoration: none;
+  font-family: "Hind Madurai", Helvetica, sans-serif;
+  color: black;
+}
+.small-input {
+  width: 100% !important;
+}
