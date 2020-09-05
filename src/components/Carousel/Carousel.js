@@ -47,44 +47,40 @@ export default function Carousel() {
     else return "#"
   }
   const edges = data.allMarkdownRemark.edges
-  const Posts = edges
-    // .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => (
-      <div className="carousel-item-wrapper">
-        <div className="carousel-data">
-          <h1 id="carousel-title">
-            <a href={edge.node.frontmatter.path}>
-              {edge.node.frontmatter.title}
+  const Posts = edges.map(edge => (
+    <div className="carousel-item-wrapper">
+      <div className="carousel-data">
+        <h1 id="carousel-title">
+          <a href={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</a>
+        </h1>
+        <div className="tags-list">
+          <h3 className="grow">
+            <a href={toLink(edge.node.frontmatter.tags[0])}>
+              {edge.node.frontmatter.tags[0]}
             </a>
-          </h1>
-          <div className="tags-list">
-            <h3>
-              <a href={toLink(edge.node.frontmatter.tags[0])}>
-                {edge.node.frontmatter.tags[0]}
-              </a>
-            </h3>
-            <h3>
-              {" "}
-              <a href={toLink(edge.node.frontmatter.tags[1])}>
-                {edge.node.frontmatter.tags[1]}
-              </a>
-            </h3>
-            <h3>
-              {" "}
-              <a href={toLink(edge.node.frontmatter.tags[2])}>
-                {edge.node.frontmatter.tags[2]}
-              </a>
-            </h3>
-            <h4>{edge.node.frontmatter.description}</h4>
-          </div>
+          </h3>
+          <h3 className="grow">
+            {" "}
+            <a href={toLink(edge.node.frontmatter.tags[1])}>
+              {edge.node.frontmatter.tags[1]}
+            </a>
+          </h3>
+          <h3 className="grow">
+            {" "}
+            <a href={toLink(edge.node.frontmatter.tags[2])}>
+              {edge.node.frontmatter.tags[2]}
+            </a>
+          </h3>
+          <h4>{edge.node.frontmatter.description}</h4>
         </div>
-        <Image
-          className="carousel-image"
-          fluid={edge.node.frontmatter.main_image.childImageSharp.fluid}
-          alt="carousel-image"
-        />
       </div>
-    ))
+      <Image
+        className="carousel-image"
+        fluid={edge.node.frontmatter.main_image.childImageSharp.fluid}
+        alt="carousel-image"
+      />
+    </div>
+  ))
   return (
     <CarouselProvider
       naturalSlideWidth={16}

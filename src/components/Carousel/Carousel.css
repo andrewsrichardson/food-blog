@@ -34,21 +34,21 @@
 }
 .tags-list {
   display: flex;
+  justify-content: space-between;
 }
 .tags-list > h3,
 h4 {
-  margin-right: 2rem;
   margin-top: 1.5rem;
-  opacity: 1;
+  /* opacity: 1; */
   font-size: 1.5rem;
+  max-width: 60%;
 }
-.tags-list > h3 > a {
+.tags-list > h3 > a,
+.tags-list > h4 {
   text-decoration: none;
   color: black;
-  background-color: #c19997;
-}
-.tags-list > h4 {
-  background-color: #c19997;
+  background-color: #f69d65;
+  color: rgba(0, 0, 0, 0.5);
 }
 #carousel-title {
   font-size: 4rem;
