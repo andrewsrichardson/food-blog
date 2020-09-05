@@ -1,11 +1,5 @@
 ---
 path: perfect-scrambled-eggs
-date: 2020-08-26T14:24:28.487Z
-title: Perfect Scrambled Eggs
-description: "The softest creamiest buttery scrambled eggs on top of a toasted
-  ciabatta roll. A perfect fool proof breakfast that will start your day off
-  right. "
-pro_tip: The key is cooking the eggs low and slow to get them as creamy as possible.
 ingredients:
   - A knob of butter
   - 3 eggs
@@ -24,6 +18,14 @@ method:
     hot pan
   - "Butter your toasted rolls and gently slide the eggs on top "
   - Garnish with the parsley and a touch more black pepper and you're good to go!
+pro_tip: The key is cooking the eggs low and slow to get them as creamy as possible.
+date: 2020-08-26T14:24:28.487Z
+title: Perfect Scrambled Eggs
+description: "The softest creamiest buttery scrambled eggs on top of a toasted
+  ciabatta roll. A perfect fool proof breakfast that will start your day off
+  right. "
+pro-tip: Make sure to turn the hob on!
+time: "5"
 tags:
   - Breakfast
 main_image: image0-2-.jpeg
