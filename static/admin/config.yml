@@ -27,9 +27,23 @@ collections:
       - name: "description"
         label: "description"
         widget: "text"
-      - name: "pro_tip"
+      - name: "pro-tip"
         label: "Pro Tip"
         widget: "text"
+        required: false
+              - name: "time"
+        label: "Time to Cook"
+        widget: "select"
+        options:
+        - { label:  "5 Mins", value: "5"}
+        - { label:  "10 Mins", value: "10"}
+        - { label:  "15 Mins", value: "15"}
+        - { label:  "20 Mins", value: "20"}
+        - { label:  "25 Mins", value: "25"}
+        - { label:  "30 Mins", value: "30"}
+        - { label:  "45 Mins", value: "45"}
+        - { label:  "1 Hour", value: "60"}
+        - { label:  "2 Hours +", value: "120"}
         required: false
       - name: "ingredients"
         label: "ingredients"
