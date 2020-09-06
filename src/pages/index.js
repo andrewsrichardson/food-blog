@@ -11,11 +11,9 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Carousel />
     <section className="description">
-      <h2>
-        🍜Hearty hella-seasoned food 🌮Lazy munches, tasty brunches, simple
-        lunches and big fat feasts ♥️ Uncomplicated and so worth it
-        #TrustThisFeast
-      </h2>
+      <h2>🍜Hearty hella-seasoned food</h2>
+      <h2>🌮Lazy munches, tasty brunches, simple lunches and big fat feasts</h2>
+      <h2>♥️ Uncomplicated and so worth it #TrustThisFeast</h2>
       <button
         className="bubbly-button"
         onClick={() => {
