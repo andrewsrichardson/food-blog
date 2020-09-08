@@ -1,0 +1,13 @@
+.description {
+  margin-top: 0px !important;
+  background-image: url("../images/banner v4.jpg");
+  background-size: 100% 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+}
+@media (max-width: 1040px) {
+  .description {
+    background-image: none;
+  }
+}
