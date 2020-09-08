@@ -80,17 +80,17 @@ li {
   list-style: none;
   margin-top: 2rem;
 }
-.description {
+.post-description {
   text-align: center;
   margin: auto;
   margin-top: 1.1rem;
   max-width: 80rem;
 }
-.description > h4,
+.post-description > h4,
 p {
   margin: auto;
 }
-.description > p {
+.post-description > p {
   margin-top: 1rem;
   font-size: 1.2rem;
 }
