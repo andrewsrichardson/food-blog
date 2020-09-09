@@ -80,19 +80,22 @@ li {
   list-style: none;
   margin-top: 2rem;
 }
-.post-description {
+.description {
   text-align: center;
   margin: auto;
   margin-top: 1.1rem;
   max-width: 80rem;
 }
-.post-description > h4,
+.description > h4,
 p {
   margin: auto;
 }
-.post-description > p {
+.description > p {
   margin-top: 1rem;
   font-size: 1.2rem;
+}
+.clear {
+  background-image: none !important;
 }
 .pro-tip {
   display: flex;

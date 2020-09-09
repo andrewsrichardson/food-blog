@@ -72,7 +72,7 @@ export default function Template({
             alt="Main Image"
           />
         </div>
-        <div className="post-description" ref={descriptionRef}>
+        <div className="clear description" ref={descriptionRef}>
           <h4>{frontmatter.description}</h4>
           <p>{"Time to Cook: " + time}</p>
         </div>
