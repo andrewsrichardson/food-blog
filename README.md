@@ -1,7 +1,7 @@
 # Website created for friend's food blog.
 
-This is a WIP, to eventaully be used as a real production site.
+Built using Gatsbb (React), Javascript, Netlify and GraphQL.
+
+Majority of components custom made using HTML and CSS.
 
 Find the site here: https://www.trustthisfeast.com/
-
-Built using Gatsby and Netlify.
