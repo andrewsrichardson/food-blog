@@ -2,10 +2,10 @@
 path: indian-spiced-aubergine
 date: 2020-09-15T15:04:12.436Z
 title: Indian Spiced Aubergine
-description: Pan fried crispy aubergine discs in a spicy masala marinade.
+description: Pan fried crispy aubergine slices in a spicy masala marinade.
   Absolutely ideal as a simple yet delicious starter or side dish in an Indian
   feast.
-pro_tip: Ensure you don't stack the aubergine discs in the pan, only do one
+pro_tip: Ensure you don't stack the aubergine slices in the pan, only do one
   layer at a time to ensure they get that golden crispy coating.
 time: "15"
 ingredients:
