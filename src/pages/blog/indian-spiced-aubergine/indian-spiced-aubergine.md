@@ -35,7 +35,7 @@ method:
 tags:
   - Indian
   - Snacks
-main_image: image0-3-.jpeg
+main_image: img_4740.jpg
 ingredients_image: image1-2-.jpeg
 ---
 .
