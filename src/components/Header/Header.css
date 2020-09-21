@@ -45,7 +45,7 @@
 }
 .nav-link-wrapper > a {
   margin-left: 40px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .nav-link {
   color: black;
@@ -70,13 +70,6 @@
   }
   .logo-wrapper {
     align-self: center;
-    /* max-width: 95%; */
-    /* font-size: 10px; */
-    /* margin-left: 0px; */
-    /* position: static; */
-    /* height: 40%; */
-    /* top: 2%; */
-    /* left: none; */
   }
   .border {
     align-self: center;

@@ -1,7 +1,7 @@
 import React from "react"
 import "./footer.css"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
@@ -115,11 +115,21 @@ export default function Footer() {
         </a>
       </div>
       <div className="built-by">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-        {` by `}
-        <a href="https://github.com/andrewsrichardson"> Andrew Richardson</a>
+        <ul>
+          <h3>
+            <Link to="/categories">Recipes</Link>
+          </h3>
+          <h3>
+            <Link to="/about">About</Link>
+          </h3>
+          <h3>
+            <Link to="/">Privacy Policy</Link>
+          </h3>
+        </ul>
+        <p>
+          © {new Date().getFullYear()}, Built by
+          <a href="https://github.com/andrewsrichardson"> Andrew Richardson</a>
+        </p>
       </div>
     </footer>
   )

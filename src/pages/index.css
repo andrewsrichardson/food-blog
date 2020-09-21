@@ -6,6 +6,22 @@
   background-repeat: no-repeat;
   padding-top: 1rem;
 }
+.about {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  margin-top: 80px;
+  padding: 10rem;
+  display: flex;
+}
+.about > div {
+  min-width: 20rem;
+  margin: auto;
+}
+.about-content {
+  height: 100%;
+  width: 50rem;
+}
 @media (max-width: 1040px) {
   .description {
     background-image: none;
