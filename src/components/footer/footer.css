@@ -31,3 +31,8 @@
   text-decoration: none;
   text-align: end;
 }
+@media (max-width: 768px) {
+  .socials {
+    flex-direction: column;
+  }
+}

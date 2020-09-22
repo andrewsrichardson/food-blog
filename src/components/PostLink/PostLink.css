@@ -35,8 +35,10 @@ a.post-title {
   color: black;
   text-decoration: none;
   font-family: "Hind Madurai", Times, serif;
-  max-width: 50%;
   margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .post-categories {
   text-align: right;
