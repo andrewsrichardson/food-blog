@@ -18,7 +18,6 @@ import useWindowDimensions from "../hooks/useWindowDimensions"
 
 const Tags = ({ pageContext, data, location }) => {
   const initialSearchTerm = location.state ? location.state.searchTerm : ""
-
   const pageLocation = location.state ? location.pathname : "/"
 
   const [results, setResults] = useState(search(initialSearchTerm))

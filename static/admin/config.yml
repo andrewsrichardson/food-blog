@@ -69,9 +69,10 @@ collections:
             "British",
           ]
         default: ["Dinner"]
-      - name: "body"
-        label: "Body"
-        widget: "markdown"
+      - name: "serves"
+        label: "serves"
+        widget: "number"
+        required: true
       - name: "main_image"
         label: "Main Image"
         widget: "image"

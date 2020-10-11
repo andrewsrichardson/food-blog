@@ -1,6 +1,6 @@
 .title-container {
   position: relative;
-  max-width: 1808px;
+  max-width: 1600px;
   margin: auto;
 }
 .title-data {
@@ -16,7 +16,7 @@
 .title,
 .date {
   margin-top: 5rem;
-  background-color: #c19997;
+  background-color: #f69d65;
 }
 .tag-links {
   display: flex;
@@ -28,7 +28,7 @@
 .tag-links > h3 > a {
   text-decoration: none;
   color: black;
-  background-color: #c19997;
+  background-color: #f69d65;
 }
 .blog-post-content {
   position: relative;
@@ -49,14 +49,12 @@
 }
 .ingredients-img-container > h2 {
   z-index: 1;
-  /* background-color: #f69d65; */
   margin-top: 0;
 }
 .method {
   width: 45%;
 }
 .method > h2 {
-  /* background-color: #f69d65; */
   text-align: center;
   margin-top: 0;
 }

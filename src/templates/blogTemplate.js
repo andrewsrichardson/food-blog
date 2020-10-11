@@ -75,6 +75,7 @@ export default function Template({
         <div className="clear description" ref={descriptionRef}>
           <h4>{frontmatter.description}</h4>
           <p>{"Time to Cook: " + time}</p>
+          <p>{"Serves: " + frontmatter.serves}</p>
         </div>
         <div className="blog-post-content">
           <div className="ingredients">
