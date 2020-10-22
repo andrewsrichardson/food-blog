@@ -17,13 +17,14 @@ export default function Template({
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
   }
-
+  console.log(ingredients)
   let ingredientsList = []
   try {
     ingredientsList = ingredients.map((ing, i) => <li key={i}>{ing}</li>)
   } catch (err) {
     console.log("No ingredients for this page")
   }
+
   let methodList = []
   try {
     methodList = method.map((inst, i) => <li key={i}>{inst}</li>)

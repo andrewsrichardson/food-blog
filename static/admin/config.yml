@@ -46,8 +46,48 @@ collections:
           - { label: "2 Hours +", value: "120" }
       - name: "ingredients"
         label: "ingredients"
-        widget: "list"
-        field: { label: Ingredient, name: ingredient, widget: text }
+        widget: "object"
+        fields:
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item"
+            name: "item"
+            widget: list
+            field: { label: "Ingredient", name: ingredient, widget: text }
       - name: "method"
         label: "Method"
         widget: "list"
@@ -57,18 +97,32 @@ collections:
         widget: "select"
         multiple: true
         min: 1
-        max: 3
+        max: 1
         options:
           [
-            "Breakfast",
-            "Lunch",
-            "Dinner",
-            "Snacks",
             "Indian",
+            "Mediterranean",
+            "Japanese",
+            "Chinese",
+            "Mexican",
             "Italian",
             "British",
+            "American",
+            "Spanish",
+            "Italian",
+            "French",
+            "Thai",
           ]
         default: ["Dinner"]
+      - name: "type"
+        label: "Meal Type"
+        widget: "select"
+        multiple: true
+        min: 1
+        max: 1
+        options: ["Brunch", "Munch", "Lunch", "Dinner", "Feast", "Pudding"]
+        default: ["Dinner"]
+
       - name: "serves"
         label: "serves"
         widget: "number"

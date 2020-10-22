@@ -66,6 +66,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
+  // timeGroup: allMarkdownRemark(limit: 2000) {
+  //   group(field: frontmatter___time) {
+  //     fieldValue
+  //   }
+  // }
+  // typeGroup: allMarkdownRemark(limit: 2000) {
+  //   group(field: frontmatter___type) {
+  //     fieldValue
+  //   }
+  // }
+
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
@@ -94,6 +105,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+
+  // const times = result.data.timeGroup.group
+  // times.forEach(tag => {
+  //   createPage({
+  //     path: `/categories/time=${lo.kebabCase(toString(tag.fieldValue))}/`,
+  //     component: tagsTemplate,
+  //     context: {
+  //       time: time.fieldValue,
+  //     },
+  //   })
+  // })
+
+  // const type = result.data.typeGroup.group
+  // type.forEach(tag => {
+  //   createPage({
+  //     path: `/categories/type=${lo.kebabCase(toString(tag.fieldValue))}/`,
+  //     component: tagsTemplate,
+  //     context: {
+  //       time: time.fieldValue,
+  //     },
+  //   })
+  // })
 
   createPage({
     path: `/categories/`,
