@@ -44,50 +44,23 @@ collections:
           - { label: "45 Mins", value: "45" }
           - { label: "1 Hour", value: "60" }
           - { label: "2 Hours +", value: "120" }
+
       - name: "ingredients"
         label: "ingredients"
-        widget: "object"
+        widget: "list"
         fields:
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
-          - label: "Item"
-            name: "item"
-            widget: list
-            field: { label: "Ingredient", name: ingredient, widget: text }
+          - label: "Item Name"
+            name: "itemname"
+            widget: string
+            default: "ing"
+          - label: "Item Components"
+            name: "itemcomponents"
+            widget: "list"
+            fields:
+              - label: "Component"
+                name: "itemcomponent"
+                widget: "string"
+
       - name: "method"
         label: "Method"
         widget: "list"
