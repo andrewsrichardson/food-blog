@@ -1,10 +1,4 @@
 ---
-path: test
-date: 2020-10-22T20:53:08.401Z
-title: test
-description: test
-pro_tip: test
-time: "20"
 ingredients:
   - itemname: item1
     itemcomponents:
@@ -24,6 +18,18 @@ ingredients:
       itemcomponents:
         - component: testc
         - component: testc
+path: test
+date: 2020-10-22T20:53:08.401Z
+title: test
+description: test
+pro_tip: test
+time: "20"
+ingredient:
+  - item:
+      itemtitle: test
+      itemcomponents:
+        - component: tst
+        - component: tst
 tags:
   - Mediterranean
 type:
