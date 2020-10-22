@@ -10,10 +10,20 @@ ingredients:
     itemcomponents:
       - itemcomponent: component
       - itemcomponent: component
+    item:
+      itemtitle: test
+      itemcomponents:
+        - component: testc
+        - component: testc
   - itemname: item2
     itemcomponents:
       - itemcomponent: component
       - itemcomponent: component
+    item:
+      itemtitle: item2
+      itemcomponents:
+        - component: testc
+        - component: testc
 tags:
   - Mediterranean
 type:
