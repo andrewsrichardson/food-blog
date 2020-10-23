@@ -7,10 +7,15 @@ pro_tip: test
 time: "20"
 ingredient:
   - item:
-      itemtitle: test
+      itemtitle: guac
       itemcomponents:
-        - component: tst
-        - component: tst
+        - component: avos
+        - component: chilli
+  - item:
+      itemtitle: burrito
+      itemcomponents:
+        - component: wraps
+        - component: chicken
 tags:
   - Mediterranean
 type:
