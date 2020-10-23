@@ -5,24 +5,45 @@ import Image from "gatsby-image"
 import "./blogTemplate.css"
 import SEO from "../components/seo"
 import parseTime from "../util/parseTimeToCook"
+import { Accordion, AccordionItem } from "react-light-accordion"
+import "react-light-accordion/demo/css/index.css"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter } = markdownRemark
-  const { ingredients, method } = frontmatter
+  const { ingredient, method } = frontmatter
 
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()
     else return "#"
   }
-  console.log(ingredients)
+
   let ingredientsList = []
   try {
-    ingredientsList = ingredients.map((ing, i) => <li key={i}>{ing}</li>)
+    ingredientsList = ingredient.map((ing, i) => {
+      const content = ing.item.itemcomponents.map((comp, i) => {
+        return <li key={i}>{comp.component}</li>
+      })
+      const list = <ol>{content}</ol>
+
+      return (
+        <AccordionItem key={i} title={ing.item.itemtitle}>
+          {list}
+        </AccordionItem>
+      )
+    })
   } catch (err) {
-    console.log("No ingredients for this page")
+    console.log(err)
+  }
+
+  function IngredientsAccordion() {
+    return (
+      <div>
+        <Accordion atomic={true}>{ingredientsList}</Accordion>
+      </div>
+    )
   }
 
   let methodList = []
@@ -86,7 +107,7 @@ export default function Template({
                 fluid={frontmatter.ingredients_image.childImageSharp.fluid}
                 alt="Ingredients Image"
               ></Image>
-              <ul className="ingredients-list">{ingredientsList}</ul>
+              <IngredientsAccordion />
             </div>
           </div>
           <div className="spacer">
@@ -116,11 +137,19 @@ export const pageQuery = graphql`
         path
         title
         tags
-        ingredients
+        ingredient {
+          item {
+            itemtitle
+            itemcomponents {
+              component
+            }
+          }
+        }
         method
         description
         pro_tip
         time
+        serves
         main_image {
           childImageSharp {
             fluid(maxWidth: 1424, maxHeight: 801, quality: 100) {

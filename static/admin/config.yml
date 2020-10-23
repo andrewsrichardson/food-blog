@@ -45,21 +45,24 @@ collections:
           - { label: "1 Hour", value: "60" }
           - { label: "2 Hours +", value: "120" }
 
-      - name: "ingredients"
+      - name: "ingredient"
         label: "ingredients"
         widget: "list"
         fields:
-          - label: "Item Name"
-            name: "itemname"
-            widget: string
-            default: "ing"
-          - label: "Item Components"
-            name: "itemcomponents"
-            widget: "list"
+          - label: "Item"
+            name: "item"
+            widget: "object"
             fields:
-              - label: "Component"
-                name: "itemcomponent"
+              - label: "title"
+                name: "itemtitle"
                 widget: "string"
+              - label: "Components"
+                name: "itemcomponents"
+                widget: "list"
+                fields:
+                  - label: "component"
+                    name: "component"
+                    widget: "string"
 
       - name: "method"
         label: "Method"

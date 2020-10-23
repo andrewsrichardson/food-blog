@@ -1,23 +1,4 @@
 ---
-ingredients:
-  - itemname: item1
-    itemcomponents:
-      - itemcomponent: component
-      - itemcomponent: component
-    item:
-      itemtitle: test
-      itemcomponents:
-        - component: testc
-        - component: testc
-  - itemname: item2
-    itemcomponents:
-      - itemcomponent: component
-      - itemcomponent: component
-    item:
-      itemtitle: item2
-      itemcomponents:
-        - component: testc
-        - component: testc
 path: test
 date: 2020-10-22T20:53:08.401Z
 title: test

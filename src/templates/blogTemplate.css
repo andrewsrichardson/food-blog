@@ -110,6 +110,24 @@ p {
   margin: auto;
   margin-left: 1rem;
 }
+.accordion {
+  margin-top: 1rem;
+  border-radius: 0px !important;
+}
+.accordion-item > button {
+  border-radius: 0px !important;
+}
+.accordion-item > .title {
+  margin-top: 0px;
+}
+.accordion-item > .panel > ol {
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.accordion-item > .panel > ol > li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 @media (max-width: 1500px) {
   .blog-post-content {
     flex-direction: column;
