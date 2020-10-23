@@ -41,7 +41,7 @@ export default function Template({
   function IngredientsAccordion() {
     return (
       <div>
-        <Accordion atomic={true}>{ingredientsList}</Accordion>
+        <Accordion atomic={false}>{ingredientsList}</Accordion>
       </div>
     )
   }
