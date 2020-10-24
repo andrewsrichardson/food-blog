@@ -14,10 +14,14 @@
 }
 .built-by {
   min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .built-by > ul > h3 {
   margin-bottom: 0px;
   margin-top: 1.5rem;
+  color: white;
 }
 .built-by > ul > h3 > a {
   font-size: 1rem;
@@ -30,9 +34,13 @@
   font-size: 0.5rem;
   text-decoration: none;
   text-align: end;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 @media (max-width: 768px) {
-  .socials {
-    flex-direction: column;
+  .socials > a > .gatsby-image-wrapper {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
