@@ -94,7 +94,7 @@ h4 {
 }
 @media (max-width: 768px) {
   #carousel-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -111,7 +111,8 @@ h4 {
   .tags-list > h4 {
     margin: auto;
     background-color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    max-width: 100%;
   }
 
   .carousel-data {
@@ -144,6 +145,6 @@ h4 {
     font-size: 1.5rem;
   }
   .tags-list > h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

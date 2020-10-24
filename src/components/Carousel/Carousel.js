@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
@@ -32,14 +32,17 @@ export default function Carousel() {
     }
   `)
 
-  const { width } = useWindowDimensions()
+  let windowWidth = null
 
-  let slideHeight = 9
-  if (width < 769) {
+  const { width } = useWindowDimensions()
+  windowWidth = width
+
+  let slideHeight = 19
+  if (windowWidth > 400) {
     slideHeight = 16
   }
-  if (width < 400) {
-    slideHeight = 19
+  if (windowWidth > 769) {
+    slideHeight = 9
   }
 
   function toLink(url) {

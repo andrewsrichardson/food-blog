@@ -41,7 +41,8 @@ export default function Header() {
           <a href="/">
             <Img
               fixed={data.logo.nodes[0].childImageSharp.fixed}
-              alt="instagram"
+              alt="logo"
+              imgStyle={{ objectFit: "contain" }}
             ></Img>
           </a>
         </div>

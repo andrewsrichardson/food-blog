@@ -46,3 +46,9 @@
     padding-top: 1rem;
   }
 }
+@media (max-width: 786px) {
+  .description > h2 {
+    font-size: 1.5rem;
+    max-width: 95%;
+  }
+}
