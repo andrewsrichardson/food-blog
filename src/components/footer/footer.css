@@ -16,7 +16,7 @@
   min-width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .built-by > ul > h3 {
   margin-bottom: 0px;

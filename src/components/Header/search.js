@@ -1,52 +1,14 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 import "./search.css"
 import { Link } from "gatsby"
 
 // Search component
-class Search extends Component {
-  state = {
-    query: "",
-    results: [],
-  }
+function Search(props) {
+  const [query, setQuery] = useState("")
+  const [results, setResults] = useState([])
+  let displayList = props.isSearchOpen ? "" : "none"
 
-  render() {
-    const ResultList = () => {
-      if (this.state.results.length > 0) {
-        return this.state.results.map((page, i) => {
-          return (
-            <div className="item-search underline" key={i}>
-              <Link href={"/" + page.url}>{page.title}</Link>
-            </div>
-          )
-        })
-      } else if (this.state.query.length > 2) {
-        return "No results for " + this.state.query
-      } else if (
-        this.state.results.length === 0 &&
-        this.state.query.length > 0
-      ) {
-        return "Please insert at least 3 characters"
-      } else {
-        return ""
-      }
-    }
-
-    return (
-      <div className="search-wrapper nav-link">
-        <input
-          className="search-input small-input"
-          type="text"
-          onChange={this.search}
-          placeholder={"Search"}
-        />
-        <div className="search-list">
-          <ResultList />
-        </div>
-      </div>
-    )
-  }
-
-  getSearchResults(query) {
+  function getSearchResults(query) {
     var index = window.__FLEXSEARCH__.en.index
     var store = window.__FLEXSEARCH__.en.store
     if (!query || !index) {
@@ -67,15 +29,50 @@ class Search extends Component {
     }
   }
 
-  search = event => {
+  function handleSearch(event) {
     const query = event.target.value
-    if (this.state.query.length > 2) {
-      const results = this.getSearchResults(query)
-      this.setState({ results: results, query: query })
+    if (query.length > 2) {
+      const results = getSearchResults(query)
+      setResults(results)
+      setQuery(query)
     } else {
-      this.setState({ results: [], query: query })
+      setResults([])
+      setQuery(query)
     }
   }
-}
 
+  function ResultList() {
+    if (results.length > 0) {
+      return results.map((page, i) => {
+        return (
+          <div className="item-search underline" key={i}>
+            <Link to={"/" + page.url}>{page.title}</Link>
+          </div>
+        )
+      })
+    } else if (query.length > 2) {
+      return "No results for " + query
+    } else if (results.length === 0 && query.length > 0) {
+      return "Please insert at least 3 characters"
+    } else {
+      return ""
+    }
+  }
+
+  return (
+    <>
+      <div className="search-wrapper">
+        <input
+          className="main-search"
+          type="text"
+          onChange={e => handleSearch(e)}
+          placeholder={"Search"}
+        />
+      </div>
+      <div className="search-list" style={{ display: `${displayList}` }}>
+        <ResultList />
+      </div>
+    </>
+  )
+}
 export default Search

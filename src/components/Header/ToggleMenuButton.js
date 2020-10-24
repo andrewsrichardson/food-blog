@@ -9,7 +9,7 @@ function ToggleMenuButton(props) {
       menu: allFile(filter: { relativePath: { eq: "ellipsis.png" } }) {
         nodes {
           childImageSharp {
-            fixed(width: 37, height: 9) {
+            fixed(width: 41, height: 10) {
               aspectRatio
               base64
               height

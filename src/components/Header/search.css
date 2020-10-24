@@ -1,15 +1,27 @@
 .search-wrapper {
   position: relative;
-  width: 6rem;
+  width: 80%;
+  height: 100%;
+  margin: auto !important;
+  margin-top: 2rem;
   display: flex;
   align-content: center;
-  margin-left: 40px;
+  overflow: hidden;
+}
+.main-search {
+  margin: auto;
+  width: 50%;
+  margin-top: 2rem;
+  border: 0;
+  border-bottom: 2px solid gray;
+  padding: 1rem;
+  position: relative;
 }
 .search-list {
   position: absolute;
   z-index: 1;
-  top: 3.5rem;
-  right: 1px;
+  top: 5rem;
+  right: 42%;
   width: 15rem;
   border-radius: 3px;
   overflow: hidden;
@@ -22,7 +34,4 @@
   text-decoration: none;
   font-family: "Hind Madurai", Helvetica, sans-serif;
   color: black;
-}
-.small-input {
-  width: 100% !important;
 }
