@@ -1,7 +1,7 @@
 ---
 path: spicy-lentil-bolognese
-date: 2020-10-25T16:20:11.000Z
-title: Spicy lentil bolognese
+date: 2020-10-21T15:20:11.000Z
+title: Spicy Lentil Bolognese
 description: A meat free alternative to a classic that will really hit the spot.
   The lentils give a hearty texture to the bolognese and it's perfect served
   with plenty of parmesan and garlic bread
