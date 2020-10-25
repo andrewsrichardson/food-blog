@@ -55,6 +55,6 @@ tags:
 type:
   - Feast
 serves: 4
-main_image: 9eca32c4-ebca-4152-b740-10c792b1b77f.jpeg
+main_image: img_5421.jpg
 ingredients_image: be709bfb-514b-4e5a-b1d2-6bb61b03a48d.jpeg
 ---
