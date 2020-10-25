@@ -1,7 +1,7 @@
 ---
 path: mushroom-toast-and-fried-eggs
 date: 2020-10-19T15:34:54.032Z
-title: Mushroom toast and fried eggs
+title: Mushroom Toast and Fried Eggs
 description: Sautéed garlic cheesy mushrooms topped with runny fried eggs make a
   glorious brunch when you need something hassle-free but delicious
 pro_tip: Don't stir the mushrooms too much when they first start sizzling, let
