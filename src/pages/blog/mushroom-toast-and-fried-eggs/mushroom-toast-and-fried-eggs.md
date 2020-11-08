@@ -9,7 +9,7 @@ pro_tip: Don't stir the mushrooms too much when they first start sizzling, let
 time: "10"
 ingredient:
   - item:
-      itemtitle: Shrooms and eggs
+      itemtitle: Mushrooms and eggs
       itemcomponents:
         - component: 150g of chestnut mushrooms (around half a pack), sliced
         - component: 1 tsp garlic puree
