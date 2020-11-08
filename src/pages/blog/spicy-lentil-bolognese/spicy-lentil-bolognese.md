@@ -25,10 +25,11 @@ ingredient:
         - component: 1/2 tsp chilli flakes
         - component: 250g pouch of cooked brown lentils
   - item:
-      itemtitle: Pasta n extras
+      itemtitle: Pasta and extras
       itemcomponents:
         - component: 300g dried spaghetti
         - component: Grated parmesan, to serve
+        - component: "Garlic bread, to serve "
 method:
   - First, get the diced onions and garlic sizzling in a deep frying pan with a
     glug of olive oil
@@ -55,6 +56,6 @@ tags:
 type:
   - Feast
 serves: 4
-main_image: img_5421.jpg
+main_image: annotation-2020-11-08-180458.png
 ingredients_image: be709bfb-514b-4e5a-b1d2-6bb61b03a48d.jpeg
 ---
