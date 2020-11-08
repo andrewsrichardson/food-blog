@@ -56,6 +56,6 @@ tags:
 type:
   - Feast
 serves: 4
-main_image: annotation-2020-11-08-180458.png
+main_image: new-one-2.png
 ingredients_image: be709bfb-514b-4e5a-b1d2-6bb61b03a48d.jpeg
 ---
