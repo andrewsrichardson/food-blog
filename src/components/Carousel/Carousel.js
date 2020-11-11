@@ -32,18 +32,21 @@ export default function Carousel() {
     }
   `)
 
-  let windowWidth = null
+  let windowWidth = 300
 
   const { width } = useWindowDimensions()
-  windowWidth = width
+  if (width) {
+    windowWidth = width
+  }
 
   let slideHeight = 19
   if (windowWidth > 400) {
-    slideHeight = 16
+    slideHeight = 17
   }
   if (windowWidth > 769) {
     slideHeight = 9
   }
+  console.log(slideHeight)
 
   function toLink(url) {
     if (url != null) return "/categories/" + url.toLowerCase()

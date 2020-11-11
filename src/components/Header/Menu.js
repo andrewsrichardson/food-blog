@@ -21,7 +21,9 @@ function Menu(props) {
         <ul>
           <ListLink to="/categories">All Recipes</ListLink>
           <ListLink to="/about">About</ListLink>
-          <ListLink to="/Contact">Contact</ListLink>
+          <li className="list-link">
+            <a href="mailto:jaina@trustthisfeast.com">Contact</a>
+          </li>
         </ul>
       </div>
     </div>

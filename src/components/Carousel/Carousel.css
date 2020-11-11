@@ -49,6 +49,7 @@ h4 {
   color: black;
   background-color: #f69d65;
   color: rgba(0, 0, 0, 0.5);
+  text-overflow: ellipsis;
 }
 #carousel-title {
   font-size: 4rem;

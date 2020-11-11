@@ -123,6 +123,9 @@ export default function Footer() {
             <Link to="/about">About</Link>
           </h3>
           <h3>
+            <a href="mailto:jaina@trustthisfeast.com">Contact</a>
+          </h3>
+          <h3>
             <Link to="/">Privacy Policy</Link>
           </h3>
         </ul>

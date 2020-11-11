@@ -28,6 +28,9 @@
   color: lightgray;
   text-decoration: none;
 }
+.built-by > ul > h3 > a:hover {
+  text-decoration: underline;
+}
 .built-by > p,
 .built-by > p > a {
   color: lightgray;
