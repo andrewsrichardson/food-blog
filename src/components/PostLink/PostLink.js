@@ -6,11 +6,12 @@ import lo from "lodash"
 import parseTime from "../../util/parseTimeToCook"
 
 const PostLink = ({ post }) => {
-  function toLink(tag) {
+  function toLink(tag, index) {
     return (
       <Link
         className="post-title grow"
         to={`/categories/${lo.kebabCase(tag)}/`}
+        key={index}
       >
         {tag}
       </Link>

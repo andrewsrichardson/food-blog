@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
@@ -39,12 +39,12 @@ export default function Carousel() {
     windowWidth = width
   }
 
-  let slideHeight = 19
-  if (windowWidth > 400) {
-    slideHeight = 17
+  const [slideHeight, setSlideHeight] = useState(19)
+  if (slideHeight !== 17 && slideHeight !== 9 && windowWidth > 400) {
+    setSlideHeight(17)
   }
-  if (windowWidth > 769) {
-    slideHeight = 9
+  if (slideHeight !== 17 && slideHeight !== 9 && windowWidth > 769) {
+    setSlideHeight(9)
   }
   console.log(slideHeight)
 
