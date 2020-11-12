@@ -7,7 +7,7 @@ description: "An easy creamy one pan wonder. A rich risotto full of veggies and
   Perfect served with a side of steamed broccoli. "
 pro_tip: It is a bit tedious stirring the risotto for a little while but it is
   so so worth it!
-time: "60"
+time: "45"
 ingredient:
   - item:
       itemtitle: Risotto
