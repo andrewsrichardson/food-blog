@@ -46,9 +46,11 @@ method:
     sizzle up the garlic and ginger until fragrant "
   - Add in the peppers and onions and let it cook off for about 5 minutes and
     then add in all the sweet and spicy sauce ingredients. Let it bubble and
-    caramelise for another 5 minutes
+    caramelise for another 5 minutes on a medium heat
   - Add in the paneer and give it a good stir and to serve, sprinkle the
-    coriander and spring onion on top and there you go !! Delicious!
+    coriander and spring onion on top and there you go !! You can have as a
+    super easy starter or bulk it out with some rice for a main - absolutely
+    banging!
 tags:
   - Indian
 type:
