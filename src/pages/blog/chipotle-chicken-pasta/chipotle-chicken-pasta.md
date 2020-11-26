@@ -6,7 +6,7 @@ description: Chipotle chilli is glorious so why not combine it in a creamy pasta
   sauce for a big bowl of goodness in the middle of winter. Its warming and
   indulgent! Full of peppers, shrooms and succulent chicken thighs - this tangy
   spicy creamy bowl will sort you out big time
-pro_tip: "I bought the chipotle chilli pasta from the spices aisle in Sainsburys
+pro_tip: "I bought the chipotle chilli paste from the spices aisle in Sainsburys
   and I would fully recommend - very good addition to a pantry of goods. "
 time: "45"
 ingredient:
@@ -23,7 +23,7 @@ ingredient:
         - component: 1 tsp paprika
         - component: "2 tbsp double cream "
         - component: Fresh parsley, finely chopped
-      itemtitle: Spicy Chipotle Pasta Sauce
+      itemtitle: Creamy Chipotle Sauce
   - item:
       itemcomponents:
         - component: 200g of pasta of your choice (I used a fancy one called Mafalda Corta
