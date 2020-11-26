@@ -3,9 +3,9 @@ path: chipotle-chicken-pasta
 date: 2020-11-26T18:02:01.306Z
 title: Chipotle Chicken Pasta
 description: Chipotle chilli is glorious so why not combine it in a creamy pasta
-  sauce for a big bowl of goodness in the middle of winter. Its warming and
-  indulgent! Full of peppers, shrooms and succulent chicken thighs - this tangy
-  spicy creamy bowl will sort you out big time
+  sauce for a big bowl of goodness in the middle of winter. Full of peppers,
+  shrooms and succulent chicken thighs - this tangy spicy creamy bowl will sort
+  you out big time
 pro_tip: "I bought the chipotle chilli paste from the spices aisle in Sainsburys
   and I would fully recommend - very good addition to a pantry of goods. "
 time: "45"
