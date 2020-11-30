@@ -41,6 +41,6 @@ tags:
 type:
   - Brunch
 serves: 3
-main_image: image0-10-.jpeg
+main_image: image1-9-.jpeg
 ingredients_image: image0-9-.jpeg
 ---
