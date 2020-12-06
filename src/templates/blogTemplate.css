@@ -123,10 +123,15 @@ p {
 .accordion-item > .panel > ol {
   margin-left: 0px;
   margin-bottom: 0px;
+  list-style: none;
+}
+.accordion-item.active > .panel {
+  max-height: min-content !important;
+  transition: max-height 0.25s ease-in !important;
 }
 .accordion-item > .panel > ol > li {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 @media (max-width: 1500px) {
   .blog-post-content {
