@@ -38,7 +38,7 @@ method:
 tags:
   - British
 type:
-  - Dinner
+  - Side Dish
 serves: 3
 main_image: img_7410.jpg
 ingredients_image: image0-12-.jpeg
