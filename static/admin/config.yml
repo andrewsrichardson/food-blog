@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: andrewsrichardson/food-blog
+publish_mode: editorial_workflow
 media_folder: "static/assets/"
 public_folder: "/assets"
 collections:
