@@ -3,7 +3,7 @@ path: the-greatest-roast-potatoes
 date: 2020-12-07T17:51:06.317Z
 title: The Greatest Roast Potatoes
 description: One of the most important parts of a Christmas dinner - crispy
-  fluffy goodness!! But these roasties are suitable all year round, accompanying
+  fluffy goodness!! But these roasties are perfect all year round, accompanying
   roasts, stews and pies!! The rosemary is an absolute winner here.
 pro_tip: Don't rush it! They need some good time in the oven to get that CRISP
 time: "120"
