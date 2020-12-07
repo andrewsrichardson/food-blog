@@ -40,6 +40,6 @@ tags:
 type:
   - Dinner
 serves: 3
-main_image: image1-10-.jpeg
+main_image: img_7410.jpg
 ingredients_image: image0-12-.jpeg
 ---
