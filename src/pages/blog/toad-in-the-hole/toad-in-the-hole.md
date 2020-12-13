@@ -6,7 +6,7 @@ description: "Sausages, leeks, stuffing and rosemary all encased in a soft
   yorkie pud - whats not to love?! This is a real comfort munch and perfect
   served with crispy roasties or creamy mash and a shed load of green veggies.
   BIG winter warmer. "
-time: "120"
+time: "60"
 ingredient:
   - item:
       itemtitle: Batter
