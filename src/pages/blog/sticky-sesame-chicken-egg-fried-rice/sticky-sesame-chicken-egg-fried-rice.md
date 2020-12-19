@@ -2,7 +2,10 @@
 path: sticky-sesame-chicken-egg-fried-rice
 date: 2020-12-16T17:14:54.996Z
 title: Sticky Sesame Chicken and Egg Fried Rice
-description: j
+description: Fulfil those takeaway cravings!! A sticky spicy chicken covered in
+  sesame seeds accompanied with a huge bowl of egg fried rice and some green soy
+  veggies. Super easy fakeaway recipe with things you'll already have knocking
+  about in the cupboard.
 time: "30"
 ingredient:
   - item:
@@ -29,6 +32,11 @@ ingredient:
         - component: 1 egg
         - component: 1 tbsp dark soy sauce
         - component: 2 spring onions, sliced
+        - component: 100g frozen peas
+  - item:
+      itemtitle: Extras
+      itemcomponents:
+        - component: "Green veg of your choice, I did florets of broccoli "
 method:
   - Chicken first. Add the garlic granules, salt and pepper into the cornflour
     in a small bowl and whisk the egg in a separate one. Dip each piece of
