@@ -55,6 +55,10 @@ method:
   - Pop in you rice and fry off for a few minutes and then make a well in the
     centre. Add in the egg to the middle and start scrambling it. Slowly
     incorporate the rice in the middle and then stir well
+  - Season well and add in the soy sauce. Cook up whatever green veg you have -
+    I steamed the broccoli for a few minutes and added a splash of soy sauce.
+  - Serve it all up in a big bowl and garnish with the chopped spring onion.
+    Enjoy !!
 tags:
   - Chinese
 type:
