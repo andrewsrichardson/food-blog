@@ -1,6 +1,6 @@
 ---
 path: sticky-sesame-chicken-egg-fried-rice
-date: 2020-12-16T17:14:54.996Z
+date: 2021-01-04T18:11:28.187Z
 title: Sticky Sesame Chicken and Egg Fried Rice
 description: Fulfil those takeaway cravings!! A sticky spicy chicken covered in
   sesame seeds accompanied with a huge bowl of egg fried rice and some green soy
