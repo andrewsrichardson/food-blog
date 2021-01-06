@@ -1,6 +1,6 @@
 ---
 path: winter-chicken-pie
-date: 2021-01-03T18:08:17.756Z
+date: 2021-01-06T17:15:56.028Z
 title: Winter Chicken Pie
 description: A creamy chicken, bacon and leek filling topped with a golden brown
   puff pastry hat. A big winter warmer and a show stopper of a dish
@@ -19,8 +19,8 @@ ingredient:
         - component: 150g chestnut mushrooms, chopped
         - component: 150g frozen peas
         - component: 2 tbsp plain flour
-        - component: 100ml double cream
-        - component: 200ml hot chicken stock
+        - component: 150ml double cream
+        - component: 250ml hot chicken stock
         - component: Sprigs of fresh parsley, finely chopped
   - item:
       itemtitle: Pie Top
@@ -53,6 +53,6 @@ tags:
 type:
   - Dinner
 serves: 4
-main_image: img_7879.jpeg
+main_image: img_7896.jpeg
 ingredients_image: img_7845.jpeg
 ---
