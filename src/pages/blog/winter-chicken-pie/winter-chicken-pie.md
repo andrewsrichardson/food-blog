@@ -5,6 +5,7 @@ title: Winter Chicken Pie
 description: A creamy chicken, bacon and leek filling topped with a golden brown
   puff pastry hat. A big winter warmer and optimal served with the greatest
   roast potatoes.
+pro_tip: "Would recommend serving this with my greatest roast potatoes recipe !! "
 time: "60"
 ingredient:
   - item:
@@ -37,17 +38,17 @@ method:
   - Cook off the herbs and tip in your mushrooms and carrots and cook off for 7
     minutes. Add a splash of olive oil if it feels a bit dry. Add the chicken
     and bacon back it and season well
-  - Sprinkle the plain flour over the veggies and stir so it is completely
-    coated. Then slowly add in the chicken stock whilst stirring. Once its all
-    added, turn the heat up so it bubbles up nicely
-  - Drizzle in the cream and add the parsley and stir well. Leave on a low heat
-    for a few minutes and then pour into a ceramic baking dish
+  - Sprinkle the plain flour into the pan and stir so it is completely coated.
+    Then slowly add in the chicken stock whilst stirring. Add in your frozen
+    peas at this point too. Once its all added, turn the heat up so it bubbles
+    up nicely
+  - Drizzle in the cream, add the parsley and stir well. Leave on a low heat for
+    a few minutes and then pour into a ceramic baking dish
   - Roll the puff pastry over the top of the dish and pinch it around the
     corners so it's sealed well. Cut a little hole in the centre so the steam
     can escape and brush the egg all over
-  - Place into the hot oven and cook for 25-30 minutes until the pastry is
-    golden brown - it is a BEAUTY
-  - Serve with roasted potatoes or creamy mash and a pile of green veggies. WOW
+  - "Place into the hot oven and cook for 25-30 minutes until the pastry is
+    golden brown - it is a BEAUTY. "
 tags:
   - British
 type:
