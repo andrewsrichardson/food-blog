@@ -3,8 +3,7 @@ path: winter-chicken-pie
 date: 2021-01-03T18:08:17.756Z
 title: Winter Chicken Pie
 description: A creamy chicken, bacon and leek filling topped with a golden brown
-  puff pastry hat. A big winter warmer and optimal served with the greatest
-  roast potatoes.
+  puff pastry hat. A big winter warmer and a show stopper of a dish
 pro_tip: "Would recommend serving this with my greatest roast potatoes recipe !! "
 time: "60"
 ingredient:
