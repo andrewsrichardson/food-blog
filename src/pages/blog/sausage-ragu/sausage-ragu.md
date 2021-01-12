@@ -2,9 +2,9 @@
 path: sausage-ragu
 date: 2021-01-11T20:48:52.141Z
 title: Sausage Ragu
-description: A rich tomato sauce filled with a variety of vegetables and
-  caramelised sausage meat. A treat in the middle of winter and perfect for
-  freezing for a rainy day
+description: A rich slow cooked tomato sauce filled with a variety of vegetables
+  and caramelised sausage meat. An absolute treated served with pasta and fresh
+  basil. Perfect for freezing for a rainy day
 time: "120"
 ingredient:
   - item:
