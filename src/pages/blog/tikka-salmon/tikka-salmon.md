@@ -1,6 +1,6 @@
 ---
 path: tikka-salmon
-date: 2021-01-06T20:35:25.998Z
+date: 2021-01-12T17:14:22.932Z
 title: Tikka Salmon
 description: A quick and easy salmon dish marinated in yogurt and indian spices
   and pan-fried to perfection. Perfect accompanied with flatbreads, rice or
