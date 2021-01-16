@@ -1,10 +1,10 @@
 ---
 path: sausage-ragu
-date: 2021-01-11T20:48:52.141Z
+date: 2021-01-16T12:27:56.258Z
 title: Sausage Ragu
 description: A rich and comforting slow cooked ragu packed with veggies,
   caramelised sausage meat and paprika. An absolute treat served with pasta,
-  fresh basil and a glass of red wine for optimal enjoyment
+  fresh basil and a glass of red wine
 time: "120"
 ingredient:
   - item:
