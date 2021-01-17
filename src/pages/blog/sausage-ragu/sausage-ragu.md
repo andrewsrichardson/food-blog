@@ -22,6 +22,7 @@ ingredient:
         - component: 1/2 tsp chilli flakes
         - component: 1 tbsp tomato puree
         - component: 1 stock cube (any of your choice)
+        - component: "4 pork sausages "
   - item:
       itemtitle: Extras
       itemcomponents:
