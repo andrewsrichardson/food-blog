@@ -57,6 +57,6 @@ tags:
 type:
   - Dinner
 serves: 2
-main_image: img_8952.jpeg
+main_image: img_8908.jpeg
 ingredients_image: img_8904.jpeg
 ---
