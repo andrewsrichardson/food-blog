@@ -2,9 +2,9 @@
 path: mums-indian-chicken-traybake
 date: 2021-01-23T18:21:18.324Z
 title: Mum's Indian Chicken Traybake
-description: Now all credits to go to my mother on this one. The easiest spicy
-  curried chicken and potato traybake EVER. Absolutely ideal for a Saturday
-  night feast to hit all the spots accompanied with a cold beverage and naans
+description: Now all credits to go to my mother on this one. An easy spicy
+  curried chicken and potato traybake. Absolutely ideal for a Saturday night
+  feast to hit all the spots accompanied with a cold beverage and naans
 pro_tip: The longer you leave it to marinate, the tastier it'll be! Feel free to
   double the ingredients if you are cooking for more people
 time: "120"
