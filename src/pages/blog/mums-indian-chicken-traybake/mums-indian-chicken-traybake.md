@@ -14,7 +14,7 @@ ingredient:
         - component: Selection of chicken on the bone (I used 2 drumsticks and 2 thighs)
         - component: 1 white onion
         - component: 5 garlic cloves
-        - component: 2 inch garlic
+        - component: 2 inch ginger
         - component: 1 green chilli (optional)
         - component: 1 tsp cumin powder
         - component: 1 tsp coriander powder
