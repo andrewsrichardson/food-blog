@@ -3,7 +3,7 @@ path: squash-leek-risotto
 date: 2021-01-24T17:05:05.060Z
 title: Squash and Leek Risotto
 description: A seriously banging veggie risotto. The sage and rosemary roasted
-  butternut squash amongst a creamy leek risotto
+  butternut squash amongst a creamy leek risotto, divine!
 time: "45"
 ingredient:
   - item:
