@@ -1,6 +1,6 @@
 ---
 path: roasted-tomato-soup
-date: 2021-02-02T21:14:15.585Z
+date: 2021-02-03T19:01:19.070Z
 title: Roasted Tomato Soup
 description: A sweet and garlicky roasted tomato soup served with crunchy
   croutons. A delicious warming lunch as an alternative to the canned classic
