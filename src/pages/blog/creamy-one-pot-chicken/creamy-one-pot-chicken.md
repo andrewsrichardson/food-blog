@@ -1,9 +1,10 @@
 ---
 path: creamy-one-pot-chicken
-date: 2021-02-02T14:46:08.160Z
+date: 2021-02-09T16:51:32.765Z
 title: Creamy One Pot Chicken
 description: This is a one pot wonder, it's easy, quick and delicious making it
-  a perfect mid week munch. Ideal served with fresh crusty bread
+  a perfect mid week munch. Chicken thighs in a creamy leek and mushroom sauce,
+  of course served with a side of fresh bread
 time: "30"
 ingredient:
   - item:
