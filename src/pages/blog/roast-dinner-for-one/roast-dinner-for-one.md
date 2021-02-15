@@ -3,7 +3,7 @@ path: roast-dinner-for-one
 date: 2021-02-02T15:49:18.776Z
 title: Roast Dinner for One
 description: Garlicky thyme chicken. Crispy roasties. Chargrilled green veggies.
-  Cooking a roast for one doesn't have to be difficult !
+  Silky smooth gravy. Cooking a roast for one doesn't have to be difficult !
 time: "60"
 ingredient:
   - item:
