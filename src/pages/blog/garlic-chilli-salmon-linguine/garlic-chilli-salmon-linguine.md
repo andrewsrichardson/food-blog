@@ -1,6 +1,6 @@
 ---
 path: garlic-chilli-salmon-linguine
-date: 2021-02-15T20:18:34.033Z
+date: 2021-02-18T19:06:15.036Z
 title: Garlic Chilli Salmon Linguine
 description: A ridiculously simple pasta dish - its fresh and easy and can be
   knocked up within 20 minutes. Flaked salmon, crushed garlic, chilli and a
