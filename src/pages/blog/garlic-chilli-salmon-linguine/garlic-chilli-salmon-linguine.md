@@ -26,19 +26,21 @@ ingredient:
         - component: 1/2 lemon
 method:
   - Lay the salmon on some foil. Drizzle some olive oil, and sprinkle some salt,
-    freshly cracked black pepper and parsley on top
+    freshly cracked black pepper and parsley on top. Fold the foil to create a
+    parcel
   - Place in a oven preheated at 180C and cook for around 14 minutes
   - Saute the onions, garlic and chilli in a frying pan with a drizzle of olive
     oil. Keep on a low heat until the onions are translucent
   - Add the linguine to a saucepan of boiled water and cook according to the
     packet instructions
-  - Add in the fish stock and add 100ml of hot water to the frying pan with the
-    onions. Stir and allow to simmer for 5 minutes
+  - Crumble the fish stock cube and add 100ml of hot water to the frying pan
+    with the onions. Stir and allow to simmer for 5 minutes
   - Once the linguine is cooked, add in to the frying pan along with a ladle of
     pasta water (liquid gold as they say!). Take the salmon from the oven and
     flake into the pasta and stir so it's all covered in all the deliciousness.
     Add in the parsley and the squeeze of lemon.
-  - Serve with lots of parmesan and freshly cracked black pepper
+  - Serve with lots of parmesan and freshly cracked black pepper and more
+    parsley !
 tags:
   - Italian
 type:
