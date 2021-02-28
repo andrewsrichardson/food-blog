@@ -1,6 +1,6 @@
 ---
 path: sunday-dinner-for-one
-date: 2021-02-02T15:49:18.776Z
+date: 2021-02-28T11:39:15.665Z
 title: Sunday Dinner for One
 description: Garlicky thyme chicken. Crispy roasties. Chargrilled green veggies.
   Silky smooth gravy. Cooking a roast for one doesn't have to be difficult !
