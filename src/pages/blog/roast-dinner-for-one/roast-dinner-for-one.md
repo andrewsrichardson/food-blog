@@ -1,7 +1,7 @@
 ---
-path: roast-dinner-for-one
+path: sunday-dinner-for-one
 date: 2021-02-02T15:49:18.776Z
-title: Roast Dinner for One
+title: Sunday Dinner for One
 description: Garlicky thyme chicken. Crispy roasties. Chargrilled green veggies.
   Silky smooth gravy. Cooking a roast for one doesn't have to be difficult !
 time: "60"
@@ -39,12 +39,12 @@ method:
     minutes to cook all the way through
   - Lay the green veggies on a tray and season well with salt and pepper. Pop in
     the oven for around 15 minutes
-  - Once the chicken is cooked, take it out of the baking dish and pop on to a
-    medium heat hob. There should be lots of goodness in the dish so add in the
-    flour and whisk to make a roux
-  - Slowly add the stock and continue stirring to make a thick gravy. Strain
-    through a sieve and you should get a silky smooth simple gravy on the other
-    end
+  - Once the chicken is cooked, take it out of the baking dish and pop on dish
+    on to medium heat hob. There should be lots of goodness in the dish so add
+    in the flour and whisk to make a roux
+  - Slowly add the stock and continue stirring to make a thick gravy. Season
+    well with freshly cracked black pepper. Strain through a sieve and you
+    should get a silky smooth simple gravy on the other end
   - Building the dish.. Get the chicken, roasties and veggies in a plate and
     pour over that silky gravy. YUM
 tags:
