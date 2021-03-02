@@ -32,6 +32,6 @@ tags:
 type:
   - Side Dish
 serves: 2
-main_image: img_0119.jpeg
+main_image: img_0113.jpeg
 ingredients_image: img_0105.jpeg
 ---
