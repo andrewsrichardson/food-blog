@@ -25,8 +25,8 @@ ingredient:
         - component: 1 aubergine, cut into discs
         - component: Handful of fresh coriander, finely chopped
 method:
-  - In a bowl add in the cornflour and all spices and whisk together. Add in the
-    vegetable oil and water to form the marinade
+  - In a bowl add in the cornflour and all spices, including garlic and ginger
+    and whisk together. Add in the vegetable oil and water to form the marinade
   - "Tip in the aubergine and ensure the marinade totally covers the discs "
   - Leave to marinate for at least 20 minutes
   - Add a splash of vegetable oil into a non stick frying pan and pop on a
