@@ -10,6 +10,7 @@ ingredient:
   - item:
       itemtitle: Masala Marinade
       itemcomponents:
+        - component: 2 tsp cornflour
         - component: 4 garlic cloves, crushed
         - component: 2cm ginger, finely chopped
         - component: 1 tsp coriander powder
