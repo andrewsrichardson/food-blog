@@ -3,8 +3,8 @@ path: thai-green-noodle-soup
 date: 2021-03-09T17:25:44.731Z
 title: Thai Green Noodle Soup
 description: Thai cuisine is one of my favourites and a Thai green curry is an
-  ultimate classic but what about as a broth filled with veggies, noodles and
-  hella garnishes. This is a banger of a dish
+  ultimate classic but what about as a spicy creamy broth filled with veggies,
+  noodles and hella garnishes. This is a banger of a dish
 time: "30"
 ingredient:
   - item:
