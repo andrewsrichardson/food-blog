@@ -1,6 +1,6 @@
 ---
 path: thai-green-noodle-soup
-date: 2021-03-06T13:10:35.663Z
+date: 2021-03-09T17:25:44.731Z
 title: Thai Green Noodle Soup
 description: Thai cuisine is one of my favourites and a Thai green curry is an
   ultimate classic but what about as a broth filled with veggies, noodles and
@@ -21,11 +21,11 @@ ingredient:
   - item:
       itemtitle: Veggies and Noodles
       itemcomponents:
-        - component: Baby corn, cut into bitesize pieces
-        - component: Sugar snap peas
-        - component: Beansprouts
-        - component: Udon Noodles
-        - component: Chestnut mushrooms, sliced
+        - component: 100g baby corn, cut into bitesize pieces
+        - component: 100g sugar snap peas
+        - component: 150g beansprouts
+        - component: 450g udon Noodles
+        - component: 150g chestnut mushrooms, sliced
         - component: 1 red pepper, sliced
   - item:
       itemtitle: Garnishes
