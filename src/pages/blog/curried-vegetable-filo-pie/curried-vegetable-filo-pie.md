@@ -1,6 +1,6 @@
 ---
 path: curried-vegetable-filo-pie
-date: 2021-03-09T18:11:04.645Z
+date: 2021-03-14T12:58:15.072Z
 title: Curried Vegetable Filo Pie
 description: A super simple spiced creamy vegetable filling topped with
   scrunches of crispy filo pastry. A delicious Sunday kinda lunch when you fancy
