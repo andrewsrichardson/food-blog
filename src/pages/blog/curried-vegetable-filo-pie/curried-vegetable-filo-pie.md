@@ -36,7 +36,8 @@ method:
     black pepper
   - "Stir in the plain flour and then slowly add in the stock to form a thick
     sauce. Add in the peas and spinach at this point and leave to simmer on a
-    medium heat for 5 minutes. Add in the butternut squash once it's roasted "
+    medium heat for 5 minutes. Stir in the double cream and add in the butternut
+    squash once it's roasted "
   - Pour the pie filling into an ovenproof dish. For the topping, take a sheet
     of filo and scrunch it up and place it on top. Repeat this until the pie is
     covered. Mine took about 6 filo sheets but it will depend on how big your
