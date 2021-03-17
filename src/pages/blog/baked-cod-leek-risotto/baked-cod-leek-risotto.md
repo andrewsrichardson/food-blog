@@ -1,8 +1,11 @@
 ---
 path: baked-cod-leek-risotto
 date: 2021-03-17T20:56:51.240Z
-title: "Baked Cod "
-description: " "
+title: Baked Cod with a Leek Risotto
+description: A parsley crusted cod loin baked in the oven and placed on top of a
+  creamy leek and pea risotto. A seriously boujee dinner but gosh, so easy!
+pro_tip: I just made one portion here but feel free to double, triple or
+  quadruple the ingredients if you're cooking for more!
 time: "30"
 ingredient:
   - item:
@@ -30,7 +33,12 @@ method:
     minutes
   - Make 600ml of boiling hot stock. Slowly add to the risotto rice. Add a bit
     at a time, let the rice soak it up and keep repeating this until the rice is
-    cooked. It usually takes around 20 minutes
+    cooked. It usually takes around 20 minutes of stirring and adding stock
+  - Give it a taste test, if the rice is still a tad crunchy, add some more
+    water and keep stirring.
+  - Once cooked, add a few spoons into a bowl and take your cod out of the oven.
+    Place the fish on top of the risotto rice. Serve with steamed green veggies,
+    YUM
 tags:
   - British
 type:
