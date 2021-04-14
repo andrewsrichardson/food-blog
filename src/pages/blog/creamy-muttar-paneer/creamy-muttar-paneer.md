@@ -42,11 +42,12 @@ method:
     double cream
   - Add in all your fillings - paneer, peas and spinach. Stir well and pop the
     lid on and cook for around 10 minutes.
+  - Drizzle the remaining cream on top! Serve with naans and rice, delicious
 tags:
   - Indian
 type:
   - Dinner
 serves: 3
-main_image: img_0813.jpeg
+main_image: img_0813-2.jpeg
 ingredients_image: img_0797.jpeg
 ---
