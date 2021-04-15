@@ -1,6 +1,6 @@
 ---
 path: creamy-muttar-paneer
-date: 2021-04-06T17:12:10.649Z
+date: 2021-04-15T16:42:52.260Z
 title: Creamy Muttar Paneer
 description: "A creamy curry filled with soft paneer cubes, baby peas and
   spinach. This is so so good and very comforting - has potential to fulfil a
