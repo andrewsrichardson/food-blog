@@ -26,6 +26,12 @@ ingredient:
         - component: 150g petit pois
         - component: 2 large handfuls of spinach
         - component: Fresh coriander, finely chopped
+  - item:
+      itemtitle: Sides
+      itemcomponents:
+        - component: Buttery rice
+        - component: Naan bread
+        - component: Fresh coriander, finely chopped
 method:
   - As the start of most curries, get the onions sizzling in a glug of vegetable
     oil until they turn translucent and slightly brown. The slower and longer
