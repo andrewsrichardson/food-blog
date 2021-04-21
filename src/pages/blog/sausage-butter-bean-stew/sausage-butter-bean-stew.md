@@ -27,7 +27,7 @@ ingredient:
         - component: 2 tbsp butter/margarine
         - component: 2 garlic cloves
         - component: Sprinkle of parsley
-        - component: Handful of your favourite cheese (
+        - component: "Handful of your favourite cheese (I used mozzarella) "
 method:
   - Get the onions sizzling in olive oil in a pan until they are translucent.
     Add in the garlic, smoked paprika and peppers and cook on a medium heat for
