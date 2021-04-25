@@ -1,12 +1,12 @@
 ---
 path: sausage-butter-bean-stew
-date: 2021-04-19T21:23:11.514Z
+date: 2021-04-25T14:22:00.785Z
 title: Sausage and Butter Bean Stew
 description: A rich spicy tomato stew filled with caramelised sausages, melt in
   the mouth butter beans and peppers. Served perfectly with some cheesy garlic
   bread to mop up the sauce !
-pro_tip: I used vegan sausages - specifically the Aldi butternut and red pepper
-  ones but feel free to use whichever you like !
+pro_tip: I used vegan sausages - specifically the Aldi butternut squash and red
+  pepper ones but feel free to use whichever you like !
 time: "45"
 ingredient:
   - item:
