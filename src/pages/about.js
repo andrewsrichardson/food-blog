@@ -26,12 +26,12 @@ function AboutPage() {
     <Layout>
       <SEO title="About" />
       <section className="about">
-        <div>
+        {/* <div>
           <GatsbyImage
             fluid={data.profile.nodes[0].childImageSharp.fluid}
             alt="profile"
           ></GatsbyImage>
-        </div>
+        </div> */}
 
         <div className="about-content">
           <p>Hey there and welcome to Trust This Feast.</p>

@@ -1,5 +1,4 @@
 export default function parseTimeToCook(time) {
-  console.log(typeof time)
   let parsedTime = time + " mins"
   if (parseInt(time) === 60) {
     parsedTime = "1 hour"
