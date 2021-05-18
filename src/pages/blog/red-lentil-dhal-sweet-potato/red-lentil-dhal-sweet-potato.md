@@ -33,11 +33,12 @@ method:
   - Remove the froth from the top of the water.
   - Get your chopped sweet potatoes, splash of oil and seasonings into a baking
     tray and place in an oven at 200C for 30 mins, stirring halfway through.
+    Don't forget to season well with salt and pepper too
   - In a separate frying pan, add in the onions and cumin seeds and fry till
     caramelised and soft
   - Add in the garlic, ginger and remaining dry spices and cook until fragrant
     for around 3 minutes. Add in your tomatoes and let them cook down in the
-    spices for approximately 10 minutes
+    spices for approximately 10 minutes. Season well at this point
   - Slowly add the cooked lentils into the masala paste, a spoonful at a time.
     Repeat until it's all mixed together and smelling delicious. Add a splash of
     water and keep on a low heat for a few minutes
