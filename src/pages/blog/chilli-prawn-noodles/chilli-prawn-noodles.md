@@ -1,6 +1,6 @@
 ---
 path: chilli-prawn-noodles
-date: 2021-07-21T21:30:46.721Z
+date: 2021-07-28T16:26:05.683Z
 title: Chilli Prawn Noodles
 description: Speedy noodley goodness! These spicy flavourful noodles can be
   knocked up within 15 minutes making it perfect for a weekday munch. So easy
