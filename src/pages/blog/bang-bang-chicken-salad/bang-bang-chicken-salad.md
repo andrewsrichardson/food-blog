@@ -1,10 +1,11 @@
 ---
 path: bang-bang-chicken-salad
-date: 2021-08-03T17:02:56.116Z
+date: 2021-08-03T18:17:23.923Z
 title: Bang Bang Chicken Salad
-description: "A light spicy zingy salad perfect for a summer evening. Chicken
-  and veggies coated in the most glorious peanut dressing topped with all the
-  garnishes you'll ever need. It's also just SO pretty to look at !! "
+description: A light spicy zingy salad perfect for a summer evening. Shredded
+  chicken and a rainbow of vegetables coated in the most glorious peanut
+  dressimg topped with spring onions and extra roasted peanuts. What a pretty
+  plate of food !
 pro_tip: If you'd like to make it vegetarian/vegan, swap out the shredded
   chicken for crispy tofu!
 time: "30"
