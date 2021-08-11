@@ -2,10 +2,10 @@
 path: spaghetti-carbonara
 date: 2021-08-11T10:03:24.446Z
 title: Spaghetti Carbonara
-description: "An absolutely stunning Italian classic. I am in now way claiming
+description: "An absolutely stunning Italian classic. I am in no way claiming
   this is authentic but my god, it's good! Glossy spaghetti tossed with crispy
-  salty pancetta and plenty of black pepper. Can be knocked up within 15
-  minutes, the ultimate dream! "
+  salty pancetta, lots of parmesan and plenty of black pepper. Can be knocked up
+  within 15 minutes, the ultimate dream! "
 time: "15"
 ingredient:
   - item:
