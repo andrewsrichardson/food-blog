@@ -1,6 +1,6 @@
 ---
 path: spaghetti-carbonara
-date: 2021-08-11T10:03:24.446Z
+date: 2021-08-11T19:06:29.760Z
 title: Spaghetti Carbonara
 description: "An absolutely stunning Italian classic. I am in no way claiming
   this is authentic but my god, it's good! Glossy spaghetti tossed with crispy
